@@ -10,40 +10,29 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $header-font;
-    
-}
-
-h1,h2{
-    text-transform: uppercase;
+    font-family: $header-font;    
 }
 
 h1 {
     color: $primary-text-color;
     font-size: 3rem;
-    text-align: center;
 
     @media (min-width: 640px) {
         font-size: 4.5rem;
     }
-
     @media (min-width: 1280px) {
         font-size: 5rem;
     }
-
 }
 
 h2 {
     font-size: 1.9rem;
-    color: darken($primary-text-color, 20);
 
     @media (min-width: 640px) {
         font-size: 2.2rem;
     }
-
     @media (min-width: 1280px) {
         font-size: 2.5rem;
-        margin: auto 0;
     }
 }
 
@@ -59,10 +48,6 @@ h3 {
     }
 }
 
-h5 {
-    opacity: 0.5;
-    font-size: 1rem;
-}
 
 h3,
 h4,

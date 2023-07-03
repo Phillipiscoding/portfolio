@@ -3,7 +3,7 @@
     flex-direction: column;
     min-height: 100vh;
     div {
+        margin-top: 50px;
         flex: 1;
-        background-color: linear-gradient(to bottom, $brand-color-dark, $primary-color-light);
     }
 }

@@ -1,6 +1,27 @@
-import Logo from "../images/logo.png";
+import React, { useState, useEffect } from 'react';
+import Logo from "../images/phillip.png";
 
 function Nav() {
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const navbar = document.getElementById('nav');
+      if (scrollTop > lastScrollTop) {
+        navbar.style.top = '-100px';
+      } else {
+        navbar.style.top = '0';
+      }
+      setLastScrollTop(scrollTop);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollTop]);
 
   return (
     <nav id="nav" className="brand-font">

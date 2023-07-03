@@ -6,10 +6,15 @@ nav {
     justify-content: center;
     background-color: $brand-color;
     color: $brand-color-dark;
+    transition: top 0.3s;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
     div {
         position: absolute;
         left: 50px;
+        top: -45px;
         transform: translateX(-50%);
 
         img {
