@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Logo from "../images/phillip.png";
+import Logo from "../images/logo.png";
 
 function Nav() {
   const [lastScrollTop, setLastScrollTop] = useState(0);

@@ -10,11 +10,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $header-font;    
+    font-family: $text-color-dark;    
 }
 
 h1 {
-    color: $primary-text-color;
     font-size: 3rem;
 
     @media (min-width: 640px) {
@@ -49,18 +48,12 @@ h3 {
 }
 
 
-h3,
-h4,
-h5,
-h6 {
-    color: $primary-text-color;
-}
 
 
 
 body {
     font: 1.8rem/1.4 $main-font;
-    color: $primary-text-color;
+    color: $text-color-dark;
 
     @media (min-width: 640px) {
         font-size: 2rem;
