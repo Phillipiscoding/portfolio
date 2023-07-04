@@ -28,10 +28,16 @@ nav {
         padding: 0;
 
         li {
+            text-transform: uppercase;
+            letter-spacing: 1px;
             text-align: center;
             margin: $spacing;
             border-radius: 50px;
             width: 150px;
+
+            &:hover~.cursor {
+                transform: scale(5);
+            }
         }
     }
 }

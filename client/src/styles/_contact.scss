@@ -1,0 +1,48 @@
+.contact {
+    background-color: white;
+    padding: 100px 0;
+}
+
+.contact-form {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+
+    div {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    } 
+
+    label {
+        text-transform: uppercase;
+    }
+
+    input,
+    textarea {
+        font-family: $brand-font;
+        width: 100%;
+        padding: 10px;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        border: none !important;
+    }
+
+    input[type="submit"] {
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: $primary-color-dark;
+    }
+}

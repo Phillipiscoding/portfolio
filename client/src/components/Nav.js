@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import Logo from "../images/logo.png";
 
 function Nav() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
+
+
+
+
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const navbar = document.getElementById('nav');
+      const navbar = document.getElementById("nav");
       if (scrollTop > lastScrollTop) {
-        navbar.style.top = '-100px';
+        navbar.style.top = "-100px";
       } else {
-        navbar.style.top = '0';
+        navbar.style.top = "0";
       }
       setLastScrollTop(scrollTop);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollTop]);
 
@@ -44,6 +49,7 @@ function Nav() {
         <li>
           <a href="/contact">Contact</a>
         </li>
+      
       </ul>
     </nav>
   );
