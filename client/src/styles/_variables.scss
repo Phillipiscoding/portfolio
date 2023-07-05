@@ -1,5 +1,5 @@
-$primary-color-dark:   #414770; // delft blue
-$primary-color:        #5B85AA; // silver lake blue
+$primary-color-dark:   #535d61; // delft blue
+$primary-color:        #0084b4; // silver lake blue
 $primary-color-light:  #EDE6F2; // magnolia
 
 $text-color-dark:   #212121; //  eerie black
@@ -24,20 +24,15 @@ $animate-time: 0.5s;
 $animate-time-delay: 0.8s;
 $animate-time-delay-extra: 1s;
 
-// DARK THEME COLORS ********************************************************
-$dark-theme-primary-color-dark:   #1f1b24;
-$dark-theme-primary-color:        #121212;
-$dark-theme-primary-color-light:  #323131;
-$dark-theme-accent-color:         #504739;
 
-// SUPERMAN THEME COLORS ****************************************************
-$superman-theme-primary-color-dark:   #e20025;
-$superman-theme-primary-color:        #0060aa;
-$superman-theme-primary-color-light:  #FFD700;
-$superman-theme-accent-color:         #010101;
 
-// GABBY'S DOLLHOUSE THEME COLORS ********************************************
-$gabby-theme-primary-color-dark:   #90579b;
-$gabby-theme-primary-color:        #8ae4e2;
-$gabby-theme-primary-color-light:  #fdafcf;
-$gabby-theme-accent-color:         #ef577f;
+
+
+
+/* SPACING  */
+/* 1em = 16px */
+//^ BREAKPOINTS
+$spacing-sm: 37.5em;
+$spacing-md: 48em;
+$spacing-lg: 64em;
+$spacing-xl: 75em;

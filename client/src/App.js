@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/App.scss";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -11,6 +12,7 @@ import Resume from "./pages/Resume";
 function App() {
   return (
     <Router>
+      <Cursor />
       <div className="app">
         <Nav />
         <div>
