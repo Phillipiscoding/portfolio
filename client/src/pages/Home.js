@@ -14,7 +14,7 @@ function Home() {
             {letter}
           </BouncingText>
         })}</h1>
-        <p>I am a <span className="webdev">Web Developer</span> specializing in Frontend development, dedicated to creating engaging and user-friendly Websites and Web Applications. By crafting exceptional Frontend experiences</p>
+        <p>As a <span className="webdev">Web Developer</span> specializing in Frontend development, my focus lies in crafting captivating and user-friendly Websites and Web Applications. I strive to create exceptional Frontend experiences that leave a lasting impression.</p>
       </div>  
       <div>
         <img src={Hero} />

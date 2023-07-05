@@ -5,7 +5,7 @@ function Cursor() {
   return (
     <AnimatedCursor
     className="cursor"
-      innerSize={10}
+      innerSize={5}
       outerSize={15}
       color='65, 71, 112'
       outerAlpha={0.2}
