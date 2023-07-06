@@ -1,59 +1,110 @@
 .projects {
+    
 
     .projects-container {
+        @include lg {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-article:nth-child(2) .project-img {
+            order: 2;
+          }
+
         .project-article {
             @include xs {
                 margin: 0 0 50px 0;
             }
-            
+            @include lg {
+               padding: 30px 0;
 
-            .project-img {
-                img {
-                    @include xs {
-                        width: 100%;
-                        margin: 10px 0;
-                    }
-                }
             }
 
-            .project-info {
 
-                .project-description {
-                    @include xs {
-                        padding-bottom: 20px;
+
+            .project-article-container {
+                @include lg {
+                    display: flex;
+
+                }
+
+                .project-img {
+                    @include lg {
+                        width: 50%;
                     }
-                    p {
+
+                    img {
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
                         @include xs {
-                            line-height: 1.8;
+                            width: 100%;
+                            margin: 10px 0;
+                        }
+
+                        @include xl {
+                            width: 400px;
                         }
                     }
                 }
 
-                .project-links {
-                    @include xs {
+                .project-info {
+                    @include lg {
+                        width: 50%;
+                        padding: 0 30px;
                         display: flex;
+                        flex-direction: column;
                         justify-content: space-between;
+                        height: 300px;
                     }
-               
-                    .project-link {
-                        background-color: $primary-color;        
-                        color: $text-color-light;
-                        border: none;
-                        padding: 10px;
-                        cursor: pointer;
-                        border-radius: 10px;
-                        text-align: center;
+
+                    .project-description {
                         @include xs {
-                            width: 120px;
+                            padding-bottom: 20px;
+                        }
+
+
+
+
+                        p {
+                            @include xs {
+                                line-height: 1.8;
+                            }
+                            @include lg {
+                                padding-top: 30px;
+                            }
                         }
                     }
-                    
-                    .project-link:hover {
-                        color: $text-color-dark;
-                        background-color: $primary-color-light;
+
+                    .project-links {
+                        @include xs {
+                            display: flex;
+                            justify-content: space-around;
+                        }
+
+                        .project-link {
+                            background-color: $primary-color;
+                            color: $text-color-light;
+                            border: none;
+                            padding: 10px;
+                            cursor: pointer;
+                            border-radius: 10px;
+                            text-align: center;
+
+                            @include xs {
+                                width: 120px;
+                            }
+                        }
+
+                        .project-link:hover {
+                            color: $text-color-dark;
+                            background-color: $primary-color-light;
+                        }
                     }
                 }
+
             }
+
+
         }
     }
 }
@@ -62,15 +113,19 @@
     @include xs {
         color: red;
     }
+
     @include sm {
         color: blue;
     }
+
     @include md {
         color: green;
     }
+
     @include lg {
         color: orange;
     }
+
     @include xl {
         color: yellow;
     }
