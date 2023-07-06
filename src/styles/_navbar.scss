@@ -1,55 +1,125 @@
-nav {
-    z-index: 9999;
-    background-color: $primary-color-light;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    // align-items: center;
-    justify-content: flex-end;
-    color: $primary-color;
-    transition: top 0.3s;
-    position: fixed;
-    top: 0;
-
-    &_content {
-        max-width: 1920px
-    }
-
-    // div containing the logo image
-    div {
-        position: absolute;
-        left: 30px;
-        top: -30px;
-        transform: translateX(-50%);
-
-        img {
-            width: 50px;
-        }
-    }
-
-    ul {
+.nav {
+    .nav-container {
+        background-color: $bg-color;
+        color: $primary-color;
         display: flex;
-        justify-content: center;
-        list-style: none;
-        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;    
+        width: 100%;
+        transition: top 0.3s;
+        position: fixed;
+        top: 0;
+        height: 40px;
+        padding: 0 10px;
 
-        li {
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: $spacing;
-            border-radius: 50px;
-            width: 150px;
+        .logo-container{
+            width: 300px;
+            a {
+                font-weight: 600;
+                @include xs { // 0px
+                    font-size: 8vw;
+                }   
+                @include sm { // 0px
+                    font-size: 2.4rem;
+                }            
+                @include lg { // 960px
+                    font-size: 2.6rem;
+                }
+            }          
+        }       
 
-            &:hover~.cursor {
-                transform: scale(5);
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+            @include md { // 720px
+                font-size: 1.6rem;
             }
         }
+
+        .hamburger {            
+            @include lg { // 720px
+                width: 300px;
+            }
+
+          }    
     }
 
-    .menu {
-        width: 30px;
-        height: 30px;
-        margin:  auto 10px auto 0 ;
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: $primary-color;
+       
+        width: 20px;
+        height: 3px;
+        display: block;
+        margin: 5px;
+        -webkit-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+   
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-list {
+        position: absolute;
+        flex-direction: column;
+        gap: 0;
+        top: 40px;
+        left: -100%;
+        text-align: start;
+        width: 100%;
+        transition: 0.7s ease-in-out;
+        background-color: $bg-color;
+        padding: 10px;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-list li {
+        margin: 16px 0;
+    }
+}
+
+.test {
+    @include xs { // 0px
+        color: red;
+    }
+
+    @include sm { // 480px
+        color: blue;
+    }
+
+    @include md { // 720px
+        color: green;
+    }
+
+    @include lg { // 960px
+        color: orange;
+    }
+
+    @include xl { // 1200px
+        color: yellow;
     }
 }

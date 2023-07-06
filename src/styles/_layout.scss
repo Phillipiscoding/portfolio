@@ -4,18 +4,27 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 40px;
 
-  div {
+  .routes {
     margin-top: 35px;
     flex: 1;
   }
 }
 
 .container {
-  width: 95vw;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 5px;
+  margin: 0 auto;
+  @include xs { 
+    width: 95vw;
+  }
+
+  @include sm { 
+    width: 85vw;
+  }
+
+
+
+
 }
 
 .border-divider {
@@ -31,6 +40,10 @@ hr.rounded {
   width: 50px;
   margin: 20px auto;
 }
+
+// section {
+//   height: 100vh;
+// }
 
 // @media (min-width: 768px) {
 //   .container {
@@ -51,3 +64,26 @@ hr.rounded {
     
 //   }
 // }
+
+
+.test {
+  @include xs { // 0px
+      color: red;
+  }
+
+  @include sm { // 480px
+      color: blue;
+  }
+
+  @include md { // 720px
+      color: green;
+  }
+
+  @include lg { // 960px
+      color: orange;
+  }
+
+  @include xl { // 1200px
+      color: yellow;
+  }
+}
