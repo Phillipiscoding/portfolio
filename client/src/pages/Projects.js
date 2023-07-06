@@ -18,8 +18,14 @@ function Projects() {
           users have the ability to create an account, log in, and seamlessly
           track their gym workouts.
         </p>
-        <a href="#" >Code</a>
-        <a href="#" >Live App</a>
+        <div>
+          <a href="#" className="button">
+            Code
+          </a>
+          <a href="#" className="button">
+            Live App
+          </a>
+        </div>
       </article>
 
       <article className="project-article">
@@ -35,8 +41,14 @@ function Projects() {
           exercise API, enabling users to search for exercises and view detailed
           descriptions and demos on how to perform them.
         </p>
-        <a href="#" >Code</a>
-        <a href="#" >Live App</a>
+        <div>
+          <a href="#" className="button">
+            Code
+          </a>
+          <a href="#" className="button">
+            Live App
+          </a>
+        </div>
       </article>
 
       <article className="project-article">
@@ -52,8 +64,14 @@ function Projects() {
           enhance their websites, providing a much-needed boost to their online
           marketing efforts.
         </p>
-        <a href="#" >Code</a>
-        <a href="#" >Live App</a>
+        <div>
+          <a href="#" className="button">
+            Code
+          </a>
+          <a href="#" className="button">
+            Live App
+          </a>
+        </div>
       </article>
     </div>
   );
