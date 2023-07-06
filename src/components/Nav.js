@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import Logo from "../images/logo.png";
-import Menu from '../icons/menu.png';
+// import { isOptionalCallExpression } from "@babel/types";
 
 function Nav() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
-
-
-
-
-
+  const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,30 +26,80 @@ function Nav() {
     };
   }, [lastScrollTop]);
 
-  return (
-    <nav id="nav" className="brand-font">
-      <div>
-        <a href="/">
-          <img src={Logo} alt="Logo" />
-        </a>
-      </div>
+  const toggleActiveClass = () => {
+    setIsActive(!isActive);
+  };
 
-      {/* <ul>
-        <li>
-          <a href="/about">Bio</a>
-        </li>
-        <li>
-          <a href="/projects">Projects</a>
-        </li>
-        <li>
-          <a href="/resume">Resume</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
-        </li>
-      
-      </ul> */}
-      <img src={Menu} className="menu" />
+  const removeActive = () => {
+    setIsActive(false);
+  };
+
+  return (
+    <nav className="nav">
+      <div className="nav-container" id="nav">
+        <div className="logo-container">
+          <a href="/" >
+            Phillip Harden
+          </a>
+        </div>
+
+        <ul className={`nav-list ${isActive ? "active" : ""}`}>
+          <li onClick={removeActive}>
+            <a href="/resume" className="navLink">
+              Resume
+            </a>
+          </li>
+          <li>
+            <Link
+              onClick={removeActive}
+              activeClass="active"
+              to="bio-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Bio
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={removeActive}
+              activeClass="active"
+              to="projects-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              onClick={removeActive}
+              activeClass="active"
+              to="contact-section"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+
+        <div
+          className={`hamburger ${isActive ? "active" : ""}`}
+          onClick={toggleActiveClass}
+        >
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+      </div>
     </nav>
   );
 }

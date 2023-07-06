@@ -1,0 +1,155 @@
+.header {
+    // padding: 80px 0 150px;
+    // height: calc(100vh - 40px);
+    @include lg {
+        // 960px
+        // height: calc(60vh - 50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-container {
+
+        @include lg {
+            // 960px
+            display: flex;
+            justify-content: space-around;
+        }
+         @include xl {
+            width: 100%;
+        }
+
+
+
+        // Greeting Div
+        div:nth-child(2) {
+            // padding: 100px;
+            margin: auto;
+
+            @include lg {
+                // 960px
+                width: 400px;
+            }
+
+            @include xl {
+                padding: 0 50px;
+                width: 1000px;
+            }
+
+
+            h1 {
+                text-align: center;
+                position: relative;
+                color: $primary-color;
+
+                @include xs {
+                    font-size: 6rem;
+                    letter-spacing: 2px;
+                }
+
+                @include sm {
+                    font-size: 8rem;
+                    letter-spacing: 4px;
+                }
+
+                @include lg {
+                    // 960px
+                    font-size: 6rem;
+                    letter-spacing: 8px;
+                }
+
+                @include xl {
+                    // 960px
+                    font-size: 10rem;
+                    letter-spacing: 8px;
+                }
+            }
+
+
+            .webdev {
+                letter-spacing: 0.5px;
+                white-space: nowrap;
+                font-family: $accent-font;
+                font-size: 3rem;
+                background: -webkit-linear-gradient($primary-color, $primary-color-dark);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: font-size 0.3s;
+            }
+        }
+
+        // image div
+        div:nth-child(1) {
+            // margin: auto;
+            text-align: center;
+
+            @include lg {
+                // 960px
+                order: 2;
+                height: calc(100vh - 40px);
+                width: 400px;
+            }
+
+            @include xl {
+                height: calc(100vh - 40px);
+            }
+
+            img {
+                @include xs {
+                    margin: 50px 0 0 0;
+                    width: 80%;
+                }
+
+                @include sm {
+                    width: 300px;
+                }
+
+                @include md {
+                    width: 350px;
+                }
+
+                @include lg {
+                    width: 375px;
+                    margin-top: 100px;
+                }
+
+                @include xl {
+                    width: 425px;
+                    margin-top: 50px;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+
+.test {
+    @include xs {
+        // 0px
+        color: red;
+    }
+
+    @include sm {
+        // 480px
+        color: blue;
+    }
+
+    @include md {
+        // 720px
+        color: green;
+    }
+
+    @include lg {
+        // 960px
+        color: orange;
+    }
+
+    @include xl {
+        // 1200px
+        color: yellow;
+    }
+}

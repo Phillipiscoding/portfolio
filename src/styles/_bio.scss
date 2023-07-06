@@ -1,0 +1,91 @@
+.bio {
+    @include xs {
+        // 0px
+        padding: 50px 0;
+    }
+
+    .bio-container {
+
+        @include lg {
+            display: flex;
+        }     
+
+        p {
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        .bio-sec {
+            @include lg {
+                width: 50%;
+            }
+        }
+
+        .skills-sec {
+            h3 {
+                padding-bottom: 22px;
+            }
+
+            @include lg {
+                width: 50%;
+            }
+
+            .skills-container {
+                margin: auto;
+
+
+                @include sm {
+                    width: 300px;
+                }
+
+
+                .skills-list {
+
+                    .skill {
+                        display: inline-block;
+                        font-size: 1.8rem;
+                        color: $primary-color-light;
+                        background-color: $primary-color;
+                        border-radius: 5px;
+                        text-align: center;
+                        padding: 5px;
+                        margin: 3px;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+}
+
+
+
+.test {
+    @include xs {
+        // 0px
+        color: red;
+    }
+
+    @include sm {
+        // 480px
+        color: blue;
+    }
+
+    @include md {
+        // 720px
+        color: green;
+    }
+
+    @include lg {
+        // 960px
+        color: orange;
+    }
+
+    @include xl {
+        // 1200px
+        color: yellow;
+    }
+}
