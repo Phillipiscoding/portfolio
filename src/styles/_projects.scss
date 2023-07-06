@@ -1,26 +1,77 @@
 .projects {
 
-   
+    .projects-container {
+        .project-article {
+            @include xs {
+                margin: 0 0 50px 0;
+            }
+            
 
-    article {
-        margin: 0 0 50px 0;
-    
-        img {
-            width: 100%;
-            margin: 10px 0;
-        }
+            .project-img {
+                img {
+                    @include xs {
+                        width: 100%;
+                        margin: 10px 0;
+                    }
+                }
+            }
 
-        div {
-            display: flex;
-            justify-content: space-around;
-            a {
-                width: 120px;
-                text-align: center;
+            .project-info {
+
+                .project-description {
+                    @include xs {
+                        padding-bottom: 20px;
+                    }
+                    p {
+                        @include xs {
+                            line-height: 1.8;
+                        }
+                    }
+                }
+
+                .project-links {
+                    @include xs {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+               
+                    .project-link {
+                        background-color: $primary-color;        
+                        color: $text-color-light;
+                        border: none;
+                        padding: 10px;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        text-align: center;
+                        @include xs {
+                            width: 120px;
+                        }
+                    }
+                    
+                    .project-link:hover {
+                        color: $text-color-dark;
+                        background-color: $primary-color-light;
+                    }
+                }
             }
         }
     }
+}
 
-    
-
-
+.test {
+    @include xs {
+        color: red;
+    }
+    @include sm {
+        color: blue;
+    }
+    @include md {
+        color: green;
+    }
+    @include lg {
+        color: orange;
+    }
+    @include xl {
+        color: yellow;
+    }
 }
