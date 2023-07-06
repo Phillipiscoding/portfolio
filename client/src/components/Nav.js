@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from "../images/logo.png";
+import Menu from '../icons/menu.png';
 
 function Nav() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -36,7 +37,7 @@ function Nav() {
         </a>
       </div>
 
-      <ul>
+      {/* <ul>
         <li>
           <a href="/about">Bio</a>
         </li>
@@ -50,7 +51,8 @@ function Nav() {
           <a href="/contact">Contact</a>
         </li>
       
-      </ul>
+      </ul> */}
+      <img src={Menu} className="menu" />
     </nav>
   );
 }

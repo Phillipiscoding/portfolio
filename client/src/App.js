@@ -5,8 +5,8 @@ import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
 
 function App() {
@@ -24,6 +24,8 @@ function App() {
             <Route exact path="/resume" element={<Resume />} />
             <Route exact path="/contact" element={<Contact />} />
           </Routes>
+          <About />
+          <Projects />
           <Contact />
         </div>
         <Footer />
