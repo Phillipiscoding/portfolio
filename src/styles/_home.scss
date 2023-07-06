@@ -1,0 +1,124 @@
+.home {
+    // padding: 80px 0 150px;
+    // height: calc(100vh - 100px);
+
+    .home-container {
+        // display: flex;
+
+        // Greeting Div
+        div:nth-child(2) {            
+            // padding: 100px;
+            margin: auto;
+
+
+            h1 {
+                font-size: 6rem;
+                text-align: center;
+                // letter-spacing: 10px;
+                position: relative;
+                color: $primary-color;
+                margin: 0 0 20px;
+            }
+
+        
+            .webdev {
+                letter-spacing: 0.5px;
+                white-space: nowrap;
+                font-family: $accent-font;
+                font-size: 3rem;
+                background: -webkit-linear-gradient($primary-color, $primary-color-dark);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: font-size 0.3s;
+            }
+
+            // .webdev {
+            //     letter-spacing: 1px;
+            //     padding: 0 5px;
+            //     font-family: $accent-font;
+            //     font-size: 4rem;
+            //     background: -webkit-linear-gradient($primary-color, $primary-color-dark);
+            //     background-clip: text;
+            //     -webkit-text-fill-color: transparent;
+            //     transition: font-size 0.3s;
+            // }
+        }
+
+        // image div
+        div:nth-child(1) {
+            margin: auto;
+            text-align: center;
+
+            img {
+                width: 80%;
+                // max-width: 100%;
+                // height: auto;
+                // margin: auto;
+            }
+        }
+
+
+
+
+
+
+
+
+
+        // div the image is in will switch to first (top) position 
+        @media (max-width: 990px) {
+            .home-container{
+                flex-direction: column;
+            }
+            div:nth-child(1) {
+                order: 2;
+                width: 80vw;
+            }
+
+        }
+
+    }
+
+
+
+
+   
+
+}
+
+
+
+// /* Media Query for Mobile Devices */
+// @media (max-width: 480px) {
+//     .home {
+//         flex-direction: column;
+//     }
+// }
+
+// /* Media Query for low resolution  Tablets, Ipads */
+// @media (min-width: 481px) and (max-width: 767px) {
+//     .home {
+//         flex-direction: column;
+//     }
+// }
+
+// /* Media Query for Tablets Ipads portrait mode */
+// @media (min-width: 768px) and (max-width: 990px) {
+//     .home {
+//         flex-direction: column;
+//     }
+// }
+
+// /* Media Query for Laptops and Desktops */
+// @media (min-width: 990px) and (max-width: 1280px) {
+//     .home {
+//         flex-wrap: wrap-reverse;
+//     }
+// }
+
+// /* Media Query for Large screens */
+// @media (min-width: 1281px) {
+//     .home {
+
+//     }
+// }
