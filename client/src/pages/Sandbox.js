@@ -1,50 +1,41 @@
-{/* <script type="text/javascript">
-var lastScrollTop =0;
-navbar = document.getElementById("navbar");
-window.addEventListener("scroll", function(){
-  let scrollTop = window.pageYOffset || document
-  .documentElement.scrollTop;
-  if (scrollTop > lastScrollTop){
-    navbar.style.top="-100px";
-  } else {
-    navbar.style.top="0";
-  }
-  lastScrollTop = scrollTop;
-})
-</script> */}
-
-{/* <script>
-var lastScrollTop = 0;
-navbar = document.getElementById("navbar");
-window.addEventListener("scroll", function(){
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  if (scrollTop > lastScrollTop){
-    navbar.style.top = "-100px";
-  } else {
-    navbar.style.top = "0";
-  }
-  lastScrollTop = scrollTop;
-});
-
-</script> */}
-
-const [lastScrollTop, setLastScrollTop] = useState(0);
+const [cursorX, setCursorX] = useState(0);
+const [cursorY, setCursorY] = useState(0);
+const [divWidth, setDivWidth] = useState(0);
+const [divHeight, setDivHeight] = useState(0);
 
 useEffect(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const navbar = document.getElementById('nav');
-    if (scrollTop > lastScrollTop) {
-      navbar.style.top = '-100px';
-    } else {
-      navbar.style.top = '0';
-    }
-    setLastScrollTop(scrollTop);
-  };
+  const divElement = document.getElementById("centeredDiv");
+  if (divElement) {
+    const { width, height } = divElement.getBoundingClientRect();
+    setDivWidth(width);
+    setDivHeight(height);
+  }
+}, []);
 
-  window.addEventListener('scroll', handleScroll);
+const updateCursorPosition = (e) => {
+  setCursorX(e.pageX);
+  setCursorY(e.pageY);
+};
 
+useEffect(() => {
+  window.addEventListener("mousemove", updateCursorPosition);
   return () => {
-    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener("mousemove", updateCursorPosition);
   };
-}, [lastScrollTop]);
+}, []);
+
+const getCenteredPosition = () => {
+  const left = cursorX - divWidth / 2;
+  const top = cursorY - divHeight / 2;
+  return { left, top };
+};
+
+<div
+id="centeredDiv"
+className="cursor"
+style={{
+  position: "fixed",
+  left: `${getCenteredPosition().left}px`,
+  top: `${getCenteredPosition().top}px`,
+}}
+></div>

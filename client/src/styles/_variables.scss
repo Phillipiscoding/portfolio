@@ -1,43 +1,41 @@
-$primary-color-dark:   #414770; // delft blue
-$primary-color:        #5B85AA; // silver lake blue
-$primary-color-light:  #EDE6F2; // magnolia
+$primary-color-dark:   #001117; 
+$primary-color:        #0084b4; 
+$primary-color-medium: #004a66;
+$primary-color-light:  #EDE6F2; 
 
-$text-color-dark:   #212121; //  eerie black
-$text-color-light: #EBEBEB; // anti-flash white
+$bg-color: #F9F6EE;
 
-$accent-color:         #EAB464; // earth yellow
-$shadow-color:         #151828; // raisin black
-$error-color:          #FF0000; // red
+$text-color-dark:   #212121;
+$text-color-light: #EBEBEB;
+
+$accent-color:         #EAB464; 
+$shadow-color:         #151828; 
+$error-color:          #FF0000; 
 
 
 
-
-
+// $main-font:  'Ubuntu', sans-serif;
+$mont-font: 'Montserrat', sans-serif;
 $header-font: 'Oswald', sans-serif;
-$main-font:  'Ubuntu', sans-serif;
+$main-font: 'Montserrat', sans-serif;
 $brand-font: 'Shadows Into Light', cursive;
-
+$accent-font: 'Caprasimo', cursive;
 $spacing: 15px;
 $border-width: 1px;
-
+// $brand-font: 'Shadows Into Light', cursive;
 $animate-time: 0.5s;
 $animate-time-delay: 0.8s;
 $animate-time-delay-extra: 1s;
 
-// DARK THEME COLORS ********************************************************
-$dark-theme-primary-color-dark:   #1f1b24;
-$dark-theme-primary-color:        #121212;
-$dark-theme-primary-color-light:  #323131;
-$dark-theme-accent-color:         #504739;
 
-// SUPERMAN THEME COLORS ****************************************************
-$superman-theme-primary-color-dark:   #e20025;
-$superman-theme-primary-color:        #0060aa;
-$superman-theme-primary-color-light:  #FFD700;
-$superman-theme-accent-color:         #010101;
 
-// GABBY'S DOLLHOUSE THEME COLORS ********************************************
-$gabby-theme-primary-color-dark:   #90579b;
-$gabby-theme-primary-color:        #8ae4e2;
-$gabby-theme-primary-color-light:  #fdafcf;
-$gabby-theme-accent-color:         #ef577f;
+
+
+
+/* SPACING  */
+/* 1em = 16px */
+//^ BREAKPOINTS
+$spacing-sm: 37.5em;
+$spacing-md: 48em;
+$spacing-lg: 64em;
+$spacing-xl: 75em;

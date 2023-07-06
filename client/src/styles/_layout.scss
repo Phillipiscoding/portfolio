@@ -1,36 +1,52 @@
 .app {
-  background-color: $text-color-light;
+  overflow: hidden !important; // This take away the scroll bar background on the right side of the mobile screen
+  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 
   div {
-    margin-top: 50px;
+    margin-top: 35px;
     flex: 1;
   }
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 95vw;
   margin-right: auto;
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+.border-divider {
+  padding-top: 20px;
+  border-bottom: 1px $accent-color solid;
+  width: 200px;
+  margin: auto;
 }
 
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+hr.rounded {
+  border-top: 8px solid $accent-color;
+  border-radius: 5px;
+  width: 50px;
+  margin: 20px auto;
 }
 
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//     width: 90%;
+//   }
+// }
+
+// @media (min-width: 992px) {
+//   .container {
+//     width: 970px;
+//   }
+// }
+
+// @media (min-width: 1200px) {
+//   .container {
+//     width: 80vw;
+//     max-width: 1500px;
+    
+//   }
+// }

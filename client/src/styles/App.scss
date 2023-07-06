@@ -1,6 +1,10 @@
 @import "reset";
 @import "variables";
+@import "mixins";
+@import 'breakpoints';
+@import "cursor";
 @import "typography";
+@import "animations";
 @import "layout";
 @import "navbar";
 @import 'footer';
@@ -9,4 +13,15 @@
 @import "resume";
 @import "contact";
 @import "projects";
+
+
+/* DEBUGGING */
+
+.background-red {
+    background-color: red;
+}
+
+.outline {
+    outline: 2px solid red;
+}
 

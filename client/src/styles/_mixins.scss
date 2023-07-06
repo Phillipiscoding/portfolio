@@ -1,0 +1,11 @@
+// mixins
+
+@mixin squared($measurement) {
+    height: $measurement;
+    width: $measurement;
+}
+
+@mixin oval-button($width) {
+    width: $width;
+    height: $width * 0.35;
+}

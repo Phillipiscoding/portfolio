@@ -1,0 +1,15 @@
+// placeholders 
+%padding-margin-default {
+    padding: $spacing;
+    margin: $spacing;
+}
+
+%rounded-border {
+    border: $border-width solid $primary-color-dark;
+    border-radius: 5px;
+}
+
+%button-section-display {
+    display: grid;
+    grid-template-columns: 76% 12% 12%;
+}
