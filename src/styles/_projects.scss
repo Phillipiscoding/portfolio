@@ -1,4 +1,4 @@
-.projects {    
+.projects {
     padding: 50px 0;
 
     .projects-container {
@@ -9,15 +9,32 @@
 
         .project-article:nth-child(2) .project-img {
             order: 2;
-          }
+            text-align: right;
+        }
+
+        .project-article:nth-child(2) .project-info {
+            text-align: left;
+        }
+
+        .project-info {
+            text-align: right;
+        }
+
 
         .project-article {
             @include xs {
                 margin: 0 0 50px 0;
             }
-            @include lg {
-               padding: 30px 0;
 
+            @include lg {
+                padding: 30px 0;
+
+            }
+
+            h3 {
+                @include lg {
+                    margin-bottom: 30px;
+                }
             }
 
             .project-article-container {
@@ -27,9 +44,6 @@
                 }
 
                 .project-img {
-                    @include lg {
-                        width: 50%;
-                    }
 
                     img {
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -41,6 +55,7 @@
 
                         @include xl {
                             max-width: 600px;
+
                         }
                     }
                 }
@@ -48,16 +63,23 @@
                 .project-info {
                     @include lg {
                         width: 50%;
-                        padding: 0 30px;
+                        padding: 0 10px;
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-between;
-                        height: 300px;
+                        justify-content: space-around;
+                        height: 360px;
+                    }
+                    @include xl {
+                        padding: 0 60px;
                     }
 
                     .project-description {
                         @include xs {
                             padding-bottom: 20px;
+                        }
+
+                        @include lg {
+                            max-width: 400px;
                         }
 
 
@@ -67,6 +89,7 @@
                             @include xs {
                                 line-height: 1.8;
                             }
+
                             @include lg {
                                 padding-top: 30px;
                             }
@@ -77,23 +100,30 @@
                         @include xs {
                             display: flex;
                             justify-content: space-around;
+
                             a {
                                 width: 120px;
                             }
                         }
+
                         @include sm {
                             a {
-                                width: 200px;
-                            }
-                        }
-                       
-
-                        @include lg {
-                            a {
-                                width: 45%;
+                                width: 160px;
                                 font-size: 1.6rem;
                             }
                         }
+
+                        @include lg {
+                            max-width: 400px;
+                        }
+
+
+
+                        // @include lg {
+                        //     a {
+                        //         max-width: 200px;
+                        //     }
+                        // }
                     }
                 }
 

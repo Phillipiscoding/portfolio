@@ -1,40 +1,33 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
+import { messageSchema } from "../Validation/MessageValidation";
+import * as yup from "yup";
 
 function ContactForm() {
-  const [input, setInput] = useState({
-    "from_name": "",
-    "from_email": "",
-    "message": "",
-  });
-  const [err, setError] = useState(null);
+  const [input, setInput] = useState({});
+  const [err, setErr] = useState(null);
   const navigate = useNavigate();
+
+  const userMessage = async (e) => {
+    e.preventDefault();
+    let messageData = {
+      from_name: e.target[0].value,
+      from_email: e.target[1].value,
+      message: e.target[2].value,
+    };
+    // const isValid = await userMessage.isValid(messageData);
+    console.log(e.target.value);
+  };
 
   const form = useRef();
   const serviceId = "service_0h9zksq";
   const templateId = "template_6ahtpil";
   const publicKey = "IT_6Gd78lg1g9xJG0";
 
-  const sendEmail = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     console.log(input);
-    if (input.from_name == "") {
-      console.log("Please enter your name.");
-      setError("Please enter your name.");
-    }
-    if (input.from_email == "") {
-      console.log("Please enter your email address.");
-      setError("Please enter your email address.");
-    }
-    if (input.message == "") {
-      console.log("Please enter a message.");
-      setError("Please enter a message.");
-    }
-    if (err == null && input.from_name == "" && input.from_email == "" &&input.message == "") {
-      console.log("It's good to go");
-    }
 
     // emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
     //   (result) => {
@@ -46,11 +39,6 @@ function ContactForm() {
     // );
   };
 
-  const acceptErrorMessage = () => {
-    console.log("ok error");
-    setError(null);
-  };
-
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -60,7 +48,7 @@ function ContactForm() {
   console.log(input);
 
   return (
-    <form className="contact-form" ref={form} onSubmit={sendEmail}>
+    <form className="contact-form" onSubmit={userMessage}>
       <div className="input-container">
         <label htmlFor="name">Name</label>
         <input
@@ -89,24 +77,22 @@ function ContactForm() {
         ></textarea>
       </div>
       <div>
-        <input className="btn btn-primary" type="submit" value="Submit" />
+        <button className="btn btn-primary no-op" onClick={handleSubmit}>
+          Submit
+        </button>
       </div>
 
-      {err && (
+      {/* {err && (
         <div className="error-message">
           <h4>Error</h4>
           <div className="error-message-container">
             <p>{err}</p>
           </div>
-          <button
-            className="btn btn-primary error-btn"
-            type="button"
-            onClick={acceptErrorMessage}
-          >
+          <button className="btn btn-primary error-btn" type="button">
             OK
           </button>
         </div>
-      )}
+      )} */}
     </form>
   );
 }

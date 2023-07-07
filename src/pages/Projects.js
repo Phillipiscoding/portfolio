@@ -96,7 +96,7 @@ function Projects() {
           <h3>Pizzys Pizza</h3>
           <div className="project-article-container">
             <div className="project-img">
-              <a href="https://github.com/Phillipiscoding/pizzyspizza">
+              <a href="https://phillipiscoding.github.io/pizzyspizza/">
                 <img
                   src={PizzysPizza}
                   alt="This is a screenshot of a fictional pizzera's website called Pizzys Pizza"
@@ -122,7 +122,7 @@ function Projects() {
                   Code
                 </a>
                 <a
-                  href="https://github.com/Phillipiscoding/pizzyspizza"
+                  href="https://phillipiscoding.github.io/pizzyspizza/"
                   className="btn btn-primary"
                 >
                   Live App
