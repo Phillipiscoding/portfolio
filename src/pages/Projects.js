@@ -35,13 +35,13 @@ function Projects() {
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/lift-phit"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Code
                 </a>
                 <a
                   href="https://github.com/Phillipiscoding/lift-phit"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Live App
                 </a>
@@ -77,13 +77,13 @@ function Projects() {
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/playfit"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Code
                 </a>
                 <a
                   href="https://github.com/Phillipiscoding/playfit"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Live App
                 </a>
@@ -117,13 +117,13 @@ function Projects() {
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/pizzyspizza"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Code
                 </a>
                 <a
                   href="https://github.com/Phillipiscoding/pizzyspizza"
-                  className="project-link"
+                  className="btn btn-primary"
                 >
                   Live App
                 </a>

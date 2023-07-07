@@ -1,4 +1,5 @@
 .header {
+
     // padding: 80px 0 150px;
     // height: calc(100vh - 40px);
     @include lg {
@@ -16,7 +17,8 @@
             display: flex;
             justify-content: space-around;
         }
-         @include xl {
+
+        @include xl {
             width: 100%;
         }
 
@@ -26,6 +28,9 @@
         div:nth-child(2) {
             // padding: 100px;
             margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             @include lg {
                 // 960px
@@ -37,8 +42,13 @@
                 width: 1000px;
             }
 
+            .contact-btn {
+                width: 100%;
+                text-align: center;
+            }
 
-            h1 {
+
+            .greeting {
                 text-align: center;
                 position: relative;
                 color: $primary-color;
@@ -64,6 +74,8 @@
                     font-size: 10rem;
                     letter-spacing: 8px;
                 }
+
+
             }
 
 
@@ -77,10 +89,25 @@
                 -webkit-text-fill-color: transparent;
                 transition: font-size 0.3s;
             }
+
+            .greeting-message {
+                @include xs {
+                    font-size: 1.6rem;
+                }
+
+                @include lg {
+                    font-size: 1.8rem;
+                }
+
+                @include xl {
+                    font-size: 2rem;
+                }
+
+            }
         }
 
         // image div
-        div:nth-child(1) {
+        .logo-container:nth-child(1) {
             // margin: auto;
             text-align: center;
 

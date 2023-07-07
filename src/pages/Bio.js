@@ -1,5 +1,6 @@
 import React from "react";
 
+
 function Bio() {
   const Skills = [
     { name: "HTML", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },

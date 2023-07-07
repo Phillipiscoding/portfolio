@@ -1,58 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const form = useRef();
+  const serviceId = "service_0h9zksq";
+  const templateId = "template_6ahtpil";
+  const publicKey = "IT_6Gd78lg1g9xJG0";
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    // Perform form submission logic here, e.g., sending data to a server
-
-    // Reset the form fields
-    setName("");
-    setEmail("");
-    setMessage("");
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
-    <form onSubmit={handleSubmit} className="contact-form">
-      <div>
+    <form className="contact-form" ref={form} onSubmit={sendEmail}>
+      <div className="input-container">
         <label htmlFor="name">Name</label>
         <input
           placeholder="Enter your name"
           type="text"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="from_name"
           required
         />
       </div>
-      <div>
+      <div className="input-container">
         <label htmlFor="email">Email</label>
         <input
           placeholder="Enter your email"
           type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="from_email"
           required
         />
       </div>
-      <div>
+      <div className="input-container">
         <label htmlFor="message">Message</label>
         <textarea
           placeholder="Enter your message"
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          name="message"
           rows="5"
           required
         ></textarea>
       </div>
-
-      <input type="submit" value="Submit" />
+      <div>
+        <input className="btn btn-primary" type="submit" value="Submit" />
+      </div>
     </form>
   );
 }

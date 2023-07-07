@@ -16,11 +16,10 @@ h6 {
 h1 {
     font-size: 3rem;
 
-    @media (min-width: 640px) {
+    @include md { // 720px
         font-size: 4.5rem;
     }
-
-    @media (min-width: 1280px) {
+    @include xl { //1200px
         font-size: 5rem;
     }
 }
@@ -45,18 +44,18 @@ h2 {
 
 h3 {
     @include xs {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         text-align: center;
         text-transform: uppercase;
         font-weight: 500;
     }
   
     @include sm {
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
 
     @include md {
-        font-size: 3.4rem;
+        font-size: 3rem;
     } 
 }
 
@@ -88,4 +87,22 @@ body {
 .brand-font {
     font-family: $brand-font;
     font-size: 3rem;
+}
+
+.test {
+    @include xs { // 0px
+        color: red;
+    }
+    @include sm { // 480px
+        color: blue;
+    }
+    @include md { // 720px
+        color: green;
+    }
+    @include lg { // 960px
+        color: orange;
+    }
+    @include xl { //1200px
+        color: yellow;
+    }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../images/logo-ebebeb.png";
 
 function Footer() {
   return (
@@ -6,7 +7,11 @@ function Footer() {
       <div className="container">
         <div>
           <div>
-            <p>Phillip Harden</p>
+            <img
+              src={Logo}
+              alt="Phillip Harden's logo. The letter PH inside of a circle"
+              className="footer-logo"
+            />
           </div>
 
           <ul>
@@ -34,7 +39,7 @@ function Footer() {
         <div></div>
 
         <div>
-          <p>&copy; 2023 Phillip is coding.</p>
+          <p className="copyright">&copy; 2023 Phillip Harden</p>
         </div>
       </div>
     </footer>

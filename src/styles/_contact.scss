@@ -1,45 +1,68 @@
 .contact {
-    background-color: #FAF9F6;
-    padding: 20px 0;
+    
+    padding: 50px 0;
 }
 
 .contact-form {
+    // background-color: red;
     display: flex;
     flex-direction: column;
-    // width: 100%;
-    // max-width: 600px;
+    // width: 95vw;
+    max-width: 600px;
     // margin: 0 auto;
-    // padding: 20px;
-    border-radius: 10px;
-
-    // div {
-    // } 
-
-    label {
-        text-transform: uppercase;
-        font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    @include sm { // 720px
+        margin: 0 auto;
     }
 
-    input,
-    textarea {
-        font-family: $main-font;
-        width: 100%;
-        padding: 10px 0;
-        font-size: 1.6rem;
-        letter-spacing: 1px;
-        border-radius: 10px;
-        border: none !important;
+    .input-container {
+        
+        @include xs { // 0px
+            width: 92%;
+            margin: 0 0 10px;
+        }
+        @include md { // 720px
+            width: 100%;
+        }
+        label {
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    
+        input,
+        textarea {
+            font-family: $main-font;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            border: none !important;
+        }
+    
+        input::placeholder, textarea::placeholder {
+            opacity: 0.5;
+          }
+    
+    
+    
+        input[type="submit"] {
+            background-color: $primary-color;        
+            color: $text-color-light;
+            border: none;
+            width: 100px;
+            // padding: 10px;
+            cursor: pointer;
+            background-color: red;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: $primary-color-medium;
+        }
     }
 
-    input[type="submit"] {
-        background-color: $primary-color;        
-        color: $text-color-light;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
+   
 
-    input[type="submit"]:hover {
-        background-color: $primary-color-medium;
-    }
+   
 }

@@ -16,17 +16,16 @@ function App() {
       <Cursor />
       <div className="app">
         <Nav />
-        <div classname="body">
-        <div classname="routes">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/home" element={<Home />} />
-            <Route exact path="/resume" element={<Resume />} />
-          </Routes>            
+        <div className="body">
+          <div className="routes">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/home" element={<Home />} />
+              <Route exact path="/resume" element={<Resume />} />
+            </Routes>
+          </div>
         </div>
 
-        </div>
-        
         <Footer />
       </div>
     </Router>

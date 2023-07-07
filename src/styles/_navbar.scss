@@ -1,50 +1,67 @@
 .nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
     .nav-container {
-        background-color: $bg-color;
-        color: $primary-color;
+        background-color: $primary-color;
+        color: $primary-color-light;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 1;    
+       
         width: 100%;
         transition: top 0.3s;
         position: fixed;
         top: 0;
-        height: 40px;
+        height: 90px;
         padding: 0 10px;
 
-        .logo-container{
+        .logo-container {
+            display: flex;
+            justify-content: center;
             width: 300px;
-            a {
+           
+
+            .brand-name {
                 font-weight: 600;
-                @include xs { // 0px
+
+                @include xs {
+                    // 0px
                     font-size: 8vw;
-                }   
-                @include sm { // 0px
+                }
+
+                @include sm {
+                    // 0px
                     font-size: 2.4rem;
-                }            
-                @include lg { // 960px
+                }
+
+                @include lg {
+                    // 960px
                     font-size: 2.6rem;
                 }
-            }          
-        }       
+            }
+        }
 
         .nav-list {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 60px;
-            @include md { // 720px
+
+            @include md {
+                // 720px
                 font-size: 1.6rem;
             }
         }
 
-        .hamburger {            
-            @include lg { // 720px
+        .hamburger {
+            @include lg {
+                // 720px
                 width: 300px;
             }
 
-          }    
+        }
     }
 
 }
@@ -58,8 +75,8 @@
     }
 
     .bar {
-        background-color: $primary-color;
-       
+        background-color: $primary-color-light;
+
         width: 20px;
         height: 3px;
         display: block;
@@ -67,7 +84,7 @@
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
     }
-   
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -84,12 +101,12 @@
         position: absolute;
         flex-direction: column;
         gap: 0;
-        top: 40px;
+        top: 90px;
         left: -100%;
         text-align: start;
         width: 100%;
         transition: 0.7s ease-in-out;
-        background-color: $bg-color;
+        background-color: $primary-color;
         padding: 10px;
     }
 
@@ -103,23 +120,28 @@
 }
 
 .test {
-    @include xs { // 0px
+    @include xs {
+        // 0px
         color: red;
     }
 
-    @include sm { // 480px
+    @include sm {
+        // 480px
         color: blue;
     }
 
-    @include md { // 720px
+    @include md {
+        // 720px
         color: green;
     }
 
-    @include lg { // 960px
+    @include lg {
+        // 960px
         color: orange;
     }
 
-    @include xl { // 1200px
+    @include xl {
+        // 1200px
         color: yellow;
     }
 }

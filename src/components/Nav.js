@@ -4,27 +4,27 @@ import Logo from "../images/logo.png";
 // import { isOptionalCallExpression } from "@babel/types";
 
 function Nav() {
-  const [lastScrollTop, setLastScrollTop] = useState(0);
+  // const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const navbar = document.getElementById("nav");
-      if (scrollTop > lastScrollTop) {
-        navbar.style.top = "-100px";
-      } else {
-        navbar.style.top = "0";
-      }
-      setLastScrollTop(scrollTop);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  //     const navbar = document.getElementById("nav");
+  //     if (scrollTop > lastScrollTop) {
+  //       navbar.style.top = "-100px";
+  //     } else {
+  //       navbar.style.top = "0";
+  //     }
+  //     setLastScrollTop(scrollTop);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollTop]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollTop]);
 
   const toggleActiveClass = () => {
     setIsActive(!isActive);
@@ -37,15 +37,15 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="nav-container" id="nav">
-        <div className="logo-container">
+        <div className="logo-container">          
           <a href="/" >
-            Phillip Harden
+            <span className="brand-name">Phillip Harden</span>
           </a>
         </div>
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
           <li onClick={removeActive}>
-            <a href="/resume" className="navLink">
+            <a href="#" className="navLink">
               Resume
             </a>
           </li>

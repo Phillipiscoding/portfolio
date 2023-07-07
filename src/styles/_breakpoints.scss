@@ -43,19 +43,19 @@ $breakpoints: (
 }
 
 .test {
-    @include xs {
+    @include xs { // 0px
         color: red;
     }
-    @include sm {
+    @include sm { // 480px
         color: blue;
     }
-    @include md {
+    @include md { // 720px
         color: green;
     }
-    @include lg {
+    @include lg { // 960px
         color: orange;
     }
-    @include xl {
+    @include xl { //1200px
         color: yellow;
     }
 }
