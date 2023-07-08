@@ -11,6 +11,7 @@ h4,
 h5,
 h6 {
     font-family: $text-color-dark;
+    cursor: default;
 }
 
 h1 {
@@ -60,6 +61,7 @@ h3 {
 }
 
 p {
+    cursor: default;
     @include xs {
         font-size: 1.8rem;
         font-weight: 500;

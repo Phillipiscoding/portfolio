@@ -1,24 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
-  const [input, setInput] = useState({}); 
-
-  // const serviceId = "service_0h9zksq";
-  // const templateId = "template_6ahtpil";
-  // const publicKey = "IT_6Gd78lg1g9xJG0";
+  const [input, setInput] = useState({});
+  const [err, setErr] = useState([]);
+  const [messageSent, setMessageSent] = useState(null);
+  const form = useRef();
+  const serviceId = "service_0h9zksq";
+  const templateId = "template_6ahtpil";
+  const publicKey = "IT_6Gd78lg1g9xJG0";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(input);
 
-    // emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
-    //   (result) => {
-    //     console.log(result.text); // respondes with "OK" if accpeted and sent
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
+    const errors = [];
+
+    if (!input.from_name) {
+      errors.push("Please enter a name.");
+    }
+
+    if (!input.from_email) {
+      errors.push("Please enter an email.");
+    }
+
+    if (!input.message) {
+      errors.push("Please enter your message.");
+    }
+
+    if (errors.length > 0) {
+      setErr(errors);
+    } else {
+      setMessageSent("Thank you for contacting me. I look forward to connecting with you.");
+
+      emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+        (result) => {
+          console.log(result.text); // respondes with "OK" if accpeted and sent
+          form.current.reset(); // clears the input fields
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+
+    }
   };
 
   const handleChange = (e) => {
@@ -27,10 +53,16 @@ function ContactForm() {
     setInput((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  console.log(input);
+  const confirmError = () => {
+    setErr([]);
+  };
+
+  const confirmSent = () => {
+    setMessageSent(null);
+  };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form ref={form} className="contact-form" onSubmit={handleSubmit}>
       <div className="input-container">
         <label htmlFor="name">Name</label>
         <input
@@ -64,17 +96,43 @@ function ContactForm() {
         </button>
       </div>
 
-      {/* {err && (
-        <div className="error-message">
-          <h4>Error</h4>
-          <div className="error-message-container">
-            <p>{err}</p>
+      {err.length > 0 && (
+        <div className="confirmation-message error-message ">
+          <div>
+            <h4>Error</h4>
           </div>
-          <button className="btn btn-primary error-btn" type="button">
+          <div className="confirmation-message-containererror-message-container">
+            {err.map((errorMessage, index) => (
+              <p key={index}>{errorMessage}</p>
+            ))}
+          </div>
+          <div>
+            <button
+              className="btn btn-primary error-btn"
+              type="button"
+              onClick={confirmError}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
+      {messageSent && (
+        <div className="confirmation-message sent-message">
+          <h4>Message Sent</h4>
+          <div className="confirmation-message-container sent-message-container">
+            <p>{messageSent}</p>
+          </div>
+          <button
+            className="btn btn-primary sent-btn"
+            type="button"
+            onClick={confirmSent}
+          >
             OK
           </button>
         </div>
-      )} */}
+      )}
     </form>
   );
 }

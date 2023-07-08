@@ -11,12 +11,12 @@ import Home from "./pages/Home";
 // import Resume from "./pages/Resume";
 // import Sandbox from "./pages/Sandbox";
 // import Cursor from "./components/TrailingCursor";
-import Cursor from "./components/Cursor";
+// import Cursor from "./components/Cursor";
 
 function App() {
   return (
     <Router>
-      <Cursor />
+      {/* <Cursor /> */}
       <div className="app">
         <Nav />
         <div className="body">

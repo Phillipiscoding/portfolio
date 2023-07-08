@@ -36,20 +36,21 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="nav-container" id="nav">
-        <div className="logo-container">          
-          <a href="/" >
+        <div className="logo-container">
+          <a href="/">
             <span className="brand-name">Phillip Harden</span>
           </a>
         </div>
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
           {/* <li onClick={removeActive}>
-            <a href="https://github.com/Phillipiscoding/portfolio" className="navLink">
+            <a href="https://github.com/Phillipiscoding/portfolio" className="navLink pointer">
               See Code
             </a>
           </li> */}
           <li>
             <Link
+              className="pointer"
               onClick={removeActive}
               activeClass="active"
               to="bio-section"
@@ -63,6 +64,7 @@ function Nav() {
           </li>
           <li>
             <Link
+            className="pointer"
               onClick={removeActive}
               activeClass="active"
               to="projects-section"
@@ -77,6 +79,7 @@ function Nav() {
 
           <li>
             <Link
+            className="pointer"
               onClick={removeActive}
               activeClass="active"
               to="contact-section"

@@ -8,6 +8,7 @@ function Contact() {
       <h2>Contact Me</h2>
       <hr className="rounded" />
     <ContactForm />
+  
       </div>
       
     

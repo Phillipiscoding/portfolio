@@ -1,6 +1,7 @@
 .contact {
     background-color: $bg-color-secondary;
     padding: 50px 0 100px;
+
     @include xl {
         padding: 100px 0 200px;
     }
@@ -48,6 +49,8 @@
             border: none !important;
         }
 
+      
+
         input::placeholder,
         textarea::placeholder {
             opacity: 0.5;
@@ -68,15 +71,98 @@
     }
 }
 
-.error-message {
+.confirmation-message {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 1s ease;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9999;
-    background-color: rgb(178, 175, 175);
-    width: 400px;
-    height: 300px;
+    z-index: 99;
+    background-color: $bg-color;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include xs {
+        width: 90vw;
+        height: auto;
+    }
+
+    @include md {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+.error-message {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 1s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: $bg-color;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include xs {
+        width: 90vw;
+        height: auto;
+    }
+
+    @include md {
+        width: 400px;
+        height: 300px;
+    }
+
+    h4 {
+        color: $error-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 3rem;
+        letter-spacing: 4px;
+    }
+
+    .error-message-container {
+        background-color: $bg-color;
+        padding: 20px;
+        border-radius: 5px;
+        align-items: center;
+        background-color: $primary-color-light;
+        padding: 20px;
+        border-radius: 2px;
+        color: $primary-color-dark;
+
+        p {
+            letter-spacing: 1px;
+            text-align: justify;
+            font-size: 1.6rem;
+        }
+    }
+
+
+
+
+
+}
+
+// MESSAGE CONFIRMATION
+.sent-message {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 1s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    background-color: $bg-color;
     border-radius: 5px;
     padding: 20px;
     display: flex;
@@ -84,16 +170,27 @@
     align-items: center;
     flex-direction: column;
 
-    h4 {
-        text-transform: uppercase;
-        font-weight: 800;
-        font-size: 2.4rem;
-
+    @include xs {
+        width: 90vw;
+        height: auto;
     }
 
-    .error-message-container {
+    @include md {
+        width: 400px;
+        height: 300px;
+    }
+
+    h4 {
+        text-transform: uppercase;
+        font-weight: 600;
+        @include xs {
+            font-size: 2rem;
+        }
+    }
+
+    .sent-message-container {
         background-color: $bg-color;
-        padding: 20px;
+        padding: 5px;
         border-radius: 5px;
         display: flex;
         justify-content: center;
@@ -101,10 +198,38 @@
 
         p {
             color: $primary-color-dark;
+            border-radius: 5px;
+            padding: 5px;
+            text-align: justify;
+            font-size: 1.4rem;
         }
     }
+}
 
-    .error-btn {
-        background-color: $error-color;
+
+.test {
+    @include xs {
+        // 0px
+        color: red;
+    }
+
+    @include sm {
+        // 480px
+        color: blue;
+    }
+
+    @include md {
+        // 720px
+        color: green;
+    }
+
+    @include lg {
+        // 960px
+        color: orange;
+    }
+
+    @include xl {
+        // 1200px
+        color: yellow;
     }
 }
