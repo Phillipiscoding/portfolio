@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Logo from "../images/logo.png";
 // import { isOptionalCallExpression } from "@babel/types";
 
 function Nav() {
@@ -45,7 +44,7 @@ function Nav() {
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
           <li onClick={removeActive}>
-            <a href="#" className="navLink">
+            <a href="/" className="navLink">
               Resume
             </a>
           </li>

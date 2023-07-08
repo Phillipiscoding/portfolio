@@ -5,10 +5,11 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 import Home from "./pages/Home";
-import Bio from "./pages/Bio";
-import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
+// import Bio from "./pages/Bio";
+// import Projects from "./pages/Projects";
+// import Contact from "./pages/Contact";
+// import Resume from "./pages/Resume";
+// import Sandbox from "./pages/Sandbox";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/home" element={<Home />} />
-              <Route exact path="/resume" element={<Resume />} />
+              {/* <Route exact path="/resume" element={<Resume />} /> */}
             </Routes>
       
         </div>

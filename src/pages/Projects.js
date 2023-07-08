@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectImage from "../images/project-image.png";
 import LiftPhit from "../images/liftphit.png";
 import PlayFit from "../images/playfit.png";
 import PizzysPizza from "../images/pizzyspizza.png";
@@ -132,6 +131,7 @@ function Projects() {
           </div>
         </article>
       </div>
+
     </div>
   );
 }

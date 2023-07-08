@@ -1,9 +1,8 @@
 .contact {
+    background-color: $bg-color-secondary;
 
     padding: 50px 0;
-    @include xl {
-       height: 100vh;
-    }
+
 
 
 }

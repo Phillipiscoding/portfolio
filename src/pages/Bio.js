@@ -1,6 +1,5 @@
 import React from "react";
 
-
 function Bio() {
   const Skills = [
     { name: "HTML", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
@@ -22,7 +21,7 @@ function Bio() {
     { name: "Bootstrap", url: "https://getbootstrap.com/" },
   ];
   return (
-    <div  className="bio container">
+    <div className="bio container">
       <h2>Bio</h2>
       <hr className="rounded" />
       <div className="bio-container">
@@ -59,6 +58,7 @@ function Bio() {
           </div>
         </section>
       </div>
+
     </div>
   );
 }

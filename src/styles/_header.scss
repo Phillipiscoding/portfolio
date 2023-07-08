@@ -8,6 +8,11 @@
         justify-content: center;
     }
 
+    @include xl {
+        max-width: 1250px;
+        // height: 100vh;
+    }
+
     .header-container {
 
         @include lg {
@@ -20,7 +25,7 @@
             width: 100%;
         }
 
-        // Greeting Div header-conetent
+        // Greeting Div header-content
         div:nth-child(2) {
             margin: auto;
             display: flex;
@@ -140,6 +145,33 @@
             }
         }
     }
+
+    .custom-shape-divider-bottom-1688792485 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1688792485 svg {
+        position: relative;
+        display: block;
+        width: calc(136% + 1.3px);
+        height: 83px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1688792485 .shape-fill {
+        fill: $bg-color-secondary;
+    }
+    
+    
+
+
+    
 }
 
 
@@ -170,3 +202,7 @@
         color: yellow;
     }
 }
+
+
+
+

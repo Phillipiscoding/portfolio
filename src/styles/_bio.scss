@@ -1,3 +1,7 @@
+#bio-section {
+    background-color: $bg-color-secondary;
+}
+
 .bio {
     @include xs {
         padding: 50px 0;
@@ -61,6 +65,8 @@
 
 
     }
+
+   
 
 }
 

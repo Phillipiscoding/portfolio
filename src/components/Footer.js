@@ -24,7 +24,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/Phillipiscoding">Twitter </a>
+              <a href="https://twitter.com/Phillipiscoding">Twitter</a>
             </li>
             <li>
               <a href="https://www.instagram.com/phillipiscoding/">
@@ -32,7 +32,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/Phillipiscoding">Facebook </a>
+              <a href="https://www.facebook.com/Phillipiscoding">Facebook</a>
             </li>
           </ul>
         </div>

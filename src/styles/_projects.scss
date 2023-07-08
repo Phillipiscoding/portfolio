@@ -44,7 +44,7 @@
 
                 .project-img {
 
-                    @include xl {
+                    @include lg {
                         width: 600px;
                         height: 300px;
                         position: relative;
@@ -61,7 +61,7 @@
                             margin: 10px 0;
                         }
 
-                        @include xl {
+                        @include lg {
                             position: absolute;
                             top: 50%;
                             left: 50%;
@@ -70,7 +70,7 @@
                         }
                     }
                     img:hover {
-                        @include xl {
+                        @include lg {
                             transform: translate(-50%, -50%) rotate(0deg);
 
                         }

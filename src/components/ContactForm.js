@@ -1,29 +1,11 @@
-import React, { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { useNavigate } from "react-router-dom";
-import { messageSchema } from "../Validation/MessageValidation";
-import * as yup from "yup";
+import React, { useState } from "react";
 
 function ContactForm() {
-  const [input, setInput] = useState({});
-  const [err, setErr] = useState(null);
-  const navigate = useNavigate();
+  const [input, setInput] = useState({}); 
 
-  const userMessage = async (e) => {
-    e.preventDefault();
-    let messageData = {
-      from_name: e.target[0].value,
-      from_email: e.target[1].value,
-      message: e.target[2].value,
-    };
-    // const isValid = await userMessage.isValid(messageData);
-    console.log(e.target.value);
-  };
-
-  const form = useRef();
-  const serviceId = "service_0h9zksq";
-  const templateId = "template_6ahtpil";
-  const publicKey = "IT_6Gd78lg1g9xJG0";
+  // const serviceId = "service_0h9zksq";
+  // const templateId = "template_6ahtpil";
+  // const publicKey = "IT_6Gd78lg1g9xJG0";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -48,7 +30,7 @@ function ContactForm() {
   console.log(input);
 
   return (
-    <form className="contact-form" onSubmit={userMessage}>
+    <form className="contact-form" onSubmit={handleSubmit}>
       <div className="input-container">
         <label htmlFor="name">Name</label>
         <input
