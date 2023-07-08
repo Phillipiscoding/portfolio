@@ -22,7 +22,7 @@ function Bio() {
     { name: "Bootstrap", url: "https://getbootstrap.com/" },
   ];
   return (
-    <div  className="bio">
+    <div  className="bio container">
       <h2>Bio</h2>
       <hr className="rounded" />
       <div className="bio-container">

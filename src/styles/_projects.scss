@@ -1,25 +1,26 @@
 .projects {
     padding: 50px 0;
 
+    @include xl {
+        max-width: 1250px;
+    }
+
     .projects-container {
         @include lg {
             display: flex;
             flex-direction: column;
         }
 
-        .project-article:nth-child(2) .project-img {
-            order: 2;
-            text-align: right;
-        }
-
-        .project-article:nth-child(2) .project-info {
-            text-align: left;
-        }
-
         .project-info {
-            text-align: right;
-        }
+            text-align: center;
 
+            .project-description {
+                @include xl {
+                    text-align: justify;
+                    padding: 0 0 0 30px;
+                }
+            }
+        }
 
         .project-article {
             @include xs {
@@ -28,7 +29,6 @@
 
             @include lg {
                 padding: 30px 0;
-
             }
 
             h3 {
@@ -40,13 +40,21 @@
             .project-article-container {
                 @include lg {
                     display: flex;
-
                 }
 
                 .project-img {
 
+                    @include xl {
+                        width: 600px;
+                        height: 300px;
+                        position: relative;
+                        overflow: visible;
+                    }
+
                     img {
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        transition: transform 1s ease;
+
 
                         @include xs {
                             width: 100%;
@@ -54,9 +62,20 @@
                         }
 
                         @include xl {
-                            max-width: 600px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(-1deg);
 
                         }
+                    }
+                    img:hover {
+                        @include xl {
+                            transform: translate(-50%, -50%) rotate(0deg);
+
+                        }
+
+                    
                     }
                 }
 
@@ -69,8 +88,11 @@
                         justify-content: space-around;
                         height: 360px;
                     }
+
                     @include xl {
-                        padding: 0 60px;
+                        // padding: 0 60px;
+                        display: flex;
+                        justify-content: space-between;
                     }
 
                     .project-description {
@@ -78,58 +100,61 @@
                             padding-bottom: 20px;
                         }
 
-                        @include lg {
-                            max-width: 400px;
-                        }
-
-
-
-
                         p {
                             @include xs {
                                 line-height: 1.8;
                             }
 
                             @include lg {
-                                padding-top: 30px;
+                                font-size: 1.6rem;
+                            }
+
+                            @include xl {
+                                padding-top: 40px;
                             }
                         }
                     }
 
                     .project-links {
+
+
                         @include xs {
                             display: flex;
                             justify-content: space-around;
 
                             a {
-                                width: 120px;
+                                @include xs {
+                                    width: 120px;
+                                    font-size: 1.6rem;
+                                }
+
+                                @include sm {
+                                    width: 160px;
+                                    font-size: 1.8rem;
+                                }
+
+                                @include md {
+                                    width: 200px;
+                                }
+
+                                @include lg {
+                                    width: 140px;
+                                    font-size: 1.2rem;
+                                }
+
+
                             }
                         }
 
-                        @include sm {
-                            a {
-                                width: 160px;
-                                font-size: 1.6rem;
-                            }
-                        }
-
-                        @include lg {
-                            max-width: 400px;
-                        }
-
-
-
-                        // @include lg {
+                        // @include sm {
                         //     a {
-                        //         max-width: 200px;
+                        //         width: 160px;
+                        //         font-size: 1.6rem;
                         //     }
-                        // }
+                        // } 
                     }
                 }
-
             }
-
-
         }
     }
 }

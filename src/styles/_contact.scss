@@ -1,6 +1,11 @@
 .contact {
 
     padding: 50px 0;
+    @include xl {
+       height: 100vh;
+    }
+
+
 }
 
 .contact-form {
@@ -14,26 +19,29 @@
     border-radius: 5px;
 
     @include sm {
-        // 720px
         margin: 0 auto;
     }
+  
 
     .input-container {
 
         @include xs {
-            // 0px
             width: 92%;
             margin: 0 0 10px;
         }
 
         @include md {
-            // 720px
             width: 100%;
         }
+
+   
 
         label {
             text-transform: uppercase;
             font-weight: 600;
+            @include xl {
+                font-size: 2.6rem;
+            }
         }
 
         input,
@@ -61,7 +69,6 @@
             width: 100px;
             // padding: 10px;
             cursor: pointer;
-            background-color: red;
         }
 
         input[type="submit"]:hover {
@@ -117,4 +124,26 @@
         background-color: $error-color;
     }
 
+}
+
+.test {
+    @include xs {
+        color: red;
+    }
+
+    @include sm {
+        color: blue;
+    }
+
+    @include md {
+        color: green;
+    }
+
+    @include lg {
+        color: orange;
+    }
+
+    @include xl {
+        color: yellow;
+    }
 }

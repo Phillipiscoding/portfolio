@@ -8,14 +8,16 @@
         color: $primary-color-light;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-       
+        align-items: center;       
         width: 100%;
         transition: top 0.3s;
         position: fixed;
-        top: 0;
-        height: 90px;
+        top: 0;       
         padding: 0 10px;
+        height: 40px;
+        @include lg {
+            height: 60px;
+        }
 
         .logo-container {
             display: flex;
@@ -25,19 +27,12 @@
 
             .brand-name {
                 font-weight: 600;
-
-                @include xs {
-                    // 0px
-                    font-size: 8vw;
-                }
-
-                @include sm {
-                    // 0px
-                    font-size: 2.4rem;
+                font-size: 5vw;
+                @include breakpoint(240px) {
+                    font-size: 2rem;
                 }
 
                 @include lg {
-                    // 960px
                     font-size: 2.6rem;
                 }
             }
@@ -47,17 +42,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 60px;
+            gap: 20px;
+            @include lg {
+                gap: 60px;
+            }
 
             @include md {
-                // 720px
                 font-size: 1.6rem;
             }
         }
 
         .hamburger {
             @include lg {
-                // 720px
                 width: 300px;
             }
 
@@ -101,7 +97,7 @@
         position: absolute;
         flex-direction: column;
         gap: 0;
-        top: 90px;
+        top: 40px;
         left: -100%;
         text-align: start;
         width: 100%;

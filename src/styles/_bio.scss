@@ -1,7 +1,10 @@
 .bio {
     @include xs {
-        // 0px
         padding: 50px 0;
+    }
+    @include xl {
+        max-width: 1250px;
+        height: 100vh;
     }
 
     .bio-container {
