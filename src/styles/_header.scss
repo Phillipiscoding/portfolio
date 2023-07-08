@@ -1,6 +1,23 @@
+
+
 .header {
-    margin-top: 40px;
-    height: calc(100vh - 40px);
+    @include xs {
+        margin-top: 40px;
+        height: calc(100vh - 40px);
+        // height: 900px;
+        display: flex;
+        flex-direction: column;
+       
+    }
+   
+    
+    @include sm {
+        margin-top: 40px;
+        height: calc(100vh - 40px);
+        heigth: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 
     @include lg {
         display: flex;
@@ -14,6 +31,7 @@
     }
 
     .header-container {
+       
 
         @include lg {
             // 960px
@@ -31,6 +49,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+           
 
             @include lg {
                 width: 400px;
@@ -102,6 +121,7 @@
 
             .contact-btn-container {
                 margin-top: 20px;
+             
             }
         }
 
@@ -146,27 +166,7 @@
         }
     }
 
-    .custom-shape-divider-bottom-1688792485 {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-    }
     
-    .custom-shape-divider-bottom-1688792485 svg {
-        position: relative;
-        display: block;
-        width: calc(136% + 1.3px);
-        height: 83px;
-        transform: rotateY(180deg);
-    }
-    
-    .custom-shape-divider-bottom-1688792485 .shape-fill {
-        fill: $bg-color-secondary;
-    }
     
     
 

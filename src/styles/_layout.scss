@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
-  
+
+
 
   .routes {
     flex: 1;
@@ -14,11 +14,12 @@
 
 .container {
   margin: 0 auto;
-  @include xs { 
+
+  @include xs {
     width: 95vw;
   }
 
-  @include sm { 
+  @include sm {
     width: 85vw;
   }
 
@@ -39,7 +40,48 @@ hr.rounded {
 }
 
 
+// Wave Divider
+.custom-shape-divider-bottom {
 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(136% + 1.3px);
+  transform: rotateY(180deg);
+
+  @include xs {
+    height: 55px;
+  }
+
+  @include sm {
+    height: 65px;
+  }
+
+  @include md {
+    height: 75px;
+  }
+
+  @include lg {
+    height: 85px;
+  }
+
+  @include xl {
+    height: 105px;
+  }
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: $bg-color-secondary;
+}
 
 
 
@@ -52,23 +94,28 @@ hr.rounded {
 
 
 .test {
-  @include xs { // 0px
-      color: red;
+  @include xs {
+    // 0px
+    color: red;
   }
 
-  @include sm { // 480px
-      color: blue;
+  @include sm {
+    // 480px
+    color: blue;
   }
 
-  @include md { // 720px
-      color: green;
+  @include md {
+    // 720px
+    color: green;
   }
 
-  @include lg { // 960px
-      color: orange;
+  @include lg {
+    // 960px
+    color: orange;
   }
 
-  @include xl { // 1200px
-      color: yellow;
+  @include xl {
+    // 1200px
+    color: yellow;
   }
 }

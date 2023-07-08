@@ -44,8 +44,8 @@ function Nav() {
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
           <li onClick={removeActive}>
-            <a href="/" className="navLink">
-              Resume
+            <a href="https://github.com/Phillipiscoding/portfolio" className="navLink">
+              See Portfolio Code
             </a>
           </li>
           <li>
