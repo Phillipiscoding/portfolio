@@ -1,19 +1,13 @@
-
-
 .header {
+
     @include xs {
         margin-top: 40px;
-        height: calc(100vh - 40px);
-        // height: 900px;
         display: flex;
         flex-direction: column;
-       
     }
-   
-    
+
     @include sm {
         margin-top: 40px;
-        height: calc(100vh - 40px);
         heigth: 100vh;
         display: flex;
         flex-direction: column;
@@ -27,11 +21,9 @@
 
     @include xl {
         max-width: 1250px;
-        // height: 100vh;
     }
 
     .header-container {
-       
 
         @include lg {
             // 960px
@@ -49,14 +41,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-           
+
 
             @include lg {
-                width: 400px;
+                margin: 250px 0 50px 0;
             }
 
             @include xl {
-                height: calc(100vh - 90px);
                 width: 1000px;
                 justify-content: end;
                 padding-bottom: 150px;
@@ -109,19 +100,13 @@
                     font-size: 1.6rem;
                 }
 
-                @include lg {
-                    font-size: 1.8rem;
-                }
-
                 @include xl {
                     font-size: 2rem;
                 }
-
             }
 
             .contact-btn-container {
                 margin-top: 20px;
-             
             }
         }
 
@@ -131,18 +116,18 @@
 
             @include lg {
                 order: 2;
-                height: calc(100vh - 40px);
-                width: 400px;
             }
+
             @include xl {
                 width: 50%;
                 text-align: right;
             }
 
             img {
+
                 @include xs {
-                    margin: 50px 0 0 0;
-                    width: 80%;
+                    margin: 10px 0 0 0;
+                    width: 70vw;
                 }
 
                 @include sm {
@@ -151,11 +136,12 @@
 
                 @include md {
                     width: 350px;
+
                 }
 
                 @include lg {
-                    width: 375px;
-                    margin: 100px 0 0 0;
+                    width: 300px;
+                    margin: 30px 0 0 0;
                 }
 
                 @include xl {
@@ -165,13 +151,6 @@
             }
         }
     }
-
-    
-    
-    
-
-
-    
 }
 
 
@@ -202,7 +181,3 @@
         color: yellow;
     }
 }
-
-
-
-

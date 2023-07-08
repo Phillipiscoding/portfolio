@@ -6,8 +6,6 @@ footer {
     justify-content: center;
     width: 100%;
 
-
-
     .footer-logo {
         width: 100px;
     }
@@ -30,13 +28,9 @@ footer {
 
     ul {
         display: flex;
-        // align-items: center;
         justify-content: space-around;
-        // max-width: 300px;
-        // margin: auto;
 
         li {
-            // display: inline-block;
             a {
                 display: inline-block;
                 text-indent: -9999px;

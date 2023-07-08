@@ -36,28 +36,43 @@ $breakpoints: (
     }
 }
 
+@mixin landscape {
+    @media (orientation: landscape) {
+        @content;
+    }
+}
+
 
 
 @mixin breakpoint($bp: 0) {
-    @media (min-width: $bp){
+    @media (min-width: $bp) {
         @content;
     }
 }
 
 .test {
-    @include xs { // 0px
+    @include xs {
+        // 0px
         color: red;
     }
-    @include sm { // 480px
+
+    @include sm {
+        // 480px
         color: blue;
     }
-    @include md { // 720px
+
+    @include md {
+        // 720px
         color: green;
     }
-    @include lg { // 960px
+
+    @include lg {
+        // 960px
         color: orange;
     }
-    @include xl { //1200px
+
+    @include xl {
+        //1200px
         color: yellow;
     }
 }

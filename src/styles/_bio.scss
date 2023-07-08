@@ -1,21 +1,25 @@
 #bio-section {
     background-color: $bg-color-secondary;
+    padding: 50px 0 100px;
+    @include xl {
+        padding: 100px 0 200px;
+    }
 }
 
 .bio {
     @include xs {
         padding: 50px 0;
     }
+
     @include xl {
         max-width: 1250px;
-        height: 100vh;
     }
 
     .bio-container {
 
         @include lg {
             display: flex;
-        }     
+        }
 
         p {
             margin: 20px 0;
@@ -40,11 +44,9 @@
             .skills-container {
                 margin: auto;
 
-
                 @include sm {
                     width: 300px;
                 }
-
 
                 .skills-list {
 
@@ -59,42 +61,7 @@
                         margin: 3px;
                     }
                 }
-
             }
         }
-
-
-    }
-
-   
-
-}
-
-
-
-.test {
-    @include xs {
-        // 0px
-        color: red;
-    }
-
-    @include sm {
-        // 480px
-        color: blue;
-    }
-
-    @include md {
-        // 720px
-        color: green;
-    }
-
-    @include lg {
-        // 960px
-        color: orange;
-    }
-
-    @include xl {
-        // 1200px
-        color: yellow;
     }
 }

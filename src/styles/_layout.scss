@@ -3,26 +3,16 @@
   background-color: $bg-color;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-
-
-
-  .routes {
-    flex: 1;
-  }
 }
 
 .container {
   margin: 0 auto;
-
   @include xs {
     width: 95vw;
   }
-
   @include sm {
     width: 85vw;
   }
-
 }
 
 .border-divider {
@@ -39,11 +29,8 @@ hr.rounded {
   margin: 20px auto;
 }
 
-
 // Wave Divider
 .custom-shape-divider-bottom {
-
-  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -82,13 +69,6 @@ hr.rounded {
 .custom-shape-divider-bottom .shape-fill {
   fill: $bg-color-secondary;
 }
-
-
-
-
-
-
-
 
 
 

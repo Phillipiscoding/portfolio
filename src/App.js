@@ -3,13 +3,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./styles/App.scss";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Cursor from "./components/Cursor";
+
 import Home from "./pages/Home";
 // import Bio from "./pages/Bio";
 // import Projects from "./pages/Projects";
 // import Contact from "./pages/Contact";
 // import Resume from "./pages/Resume";
 // import Sandbox from "./pages/Sandbox";
+// import Cursor from "./components/TrailingCursor";
+import Cursor from "./components/Cursor";
 
 function App() {
   return (

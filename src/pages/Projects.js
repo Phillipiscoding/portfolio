@@ -11,7 +11,6 @@ function Projects() {
       <div className="projects-container">
         <article className="project-article">
           <h3>Lift Phit</h3>
-
           <div className="project-article-container">
             <div className="project-img">
               <a href="https://github.com/Phillipiscoding/lift-phit">
@@ -21,7 +20,6 @@ function Projects() {
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -30,7 +28,6 @@ function Projects() {
                   seamlessly track their gym workouts.
                 </p>
               </div>
-
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/lift-phit"
@@ -48,7 +45,6 @@ function Projects() {
             </div>
           </div>
         </article>
-
         <article className="project-article">
           <h3>Play Fit</h3>
           <div className="project-article-container">
@@ -60,7 +56,6 @@ function Projects() {
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -72,7 +67,6 @@ function Projects() {
                   and demos on how to perform them.
                 </p>
               </div>
-
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/playfit"
@@ -90,7 +84,6 @@ function Projects() {
             </div>
           </div>
         </article>
-
         <article className="project-article">
           <h3>Pizzys Pizza</h3>
           <div className="project-article-container">
@@ -102,7 +95,6 @@ function Projects() {
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -131,7 +123,6 @@ function Projects() {
           </div>
         </article>
       </div>
-
     </div>
   );
 }

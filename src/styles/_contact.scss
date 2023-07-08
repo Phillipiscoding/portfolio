@@ -1,26 +1,21 @@
 .contact {
     background-color: $bg-color-secondary;
-
-    padding: 50px 0;
-
-
-
+    padding: 50px 0 100px;
+    @include xl {
+        padding: 100px 0 200px;
+    }
 }
 
 .contact-form {
-    // background-color: red;
     display: flex;
     flex-direction: column;
-    // width: 95vw;
     max-width: 600px;
-    // margin: 0 auto;
     padding: 10px;
     border-radius: 5px;
 
     @include sm {
         margin: 0 auto;
     }
-  
 
     .input-container {
 
@@ -33,11 +28,10 @@
             width: 100%;
         }
 
-   
-
         label {
             text-transform: uppercase;
             font-weight: 600;
+
             @include xl {
                 font-size: 2.6rem;
             }
@@ -59,8 +53,6 @@
             opacity: 0.5;
         }
 
-
-
         input[type="submit"] {
             background-color: $primary-color;
             color: $text-color-light;
@@ -74,10 +66,6 @@
             background-color: $primary-color-medium;
         }
     }
-
-
-
-
 }
 
 .error-message {
@@ -111,38 +99,12 @@
         justify-content: center;
         align-items: center;
 
-
-
         p {
             color: $primary-color-dark;
-
         }
-      
     }
+
     .error-btn {
         background-color: $error-color;
-    }
-
-}
-
-.test {
-    @include xs {
-        color: red;
-    }
-
-    @include sm {
-        color: blue;
-    }
-
-    @include md {
-        color: green;
-    }
-
-    @include lg {
-        color: orange;
-    }
-
-    @include xl {
-        color: yellow;
     }
 }

@@ -43,11 +43,11 @@ function Nav() {
         </div>
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
-          <li onClick={removeActive}>
+          {/* <li onClick={removeActive}>
             <a href="https://github.com/Phillipiscoding/portfolio" className="navLink">
-              See Portfolio Code
+              See Code
             </a>
-          </li>
+          </li> */}
           <li>
             <Link
               onClick={removeActive}
