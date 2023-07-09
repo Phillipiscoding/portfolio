@@ -1,5 +1,4 @@
 import React from "react";
-import Family from "../images/family.jpeg";
 
 function About() {
   const Skills = [
@@ -63,17 +62,9 @@ function About() {
               still connected and networking with the local Atlanta CHH scene.
             </p>
 
-            <div className="family-photo-container">
-              <img
-                className="family-photo"
-                src={Family}
-                alt="This is my family. Me, my wife Seble, and our daughter Christina."
-              />
-            </div>
-
             <p>
               My greatest love is for my family. My wife and my daughter are the
-              biggest inspiration in my life. It was the birth of my daughter
+              biggest inspirations in my life. It was the birth of my daughter
               that inspired me to pursue web development. I was first introduced
               to code in the MySpace era and immediately fell in love with it.
               Once MySpace dissolved I stopped experimenting with code. In 2019
