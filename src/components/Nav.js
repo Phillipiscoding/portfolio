@@ -53,13 +53,13 @@ function Nav() {
               className="pointer"
               onClick={removeActive}
               activeClass="active"
-              to="bio-section"
+              to="about-section"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              Bio
+              About
             </Link>
           </li>
           <li>

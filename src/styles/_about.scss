@@ -1,4 +1,4 @@
-#bio-section {
+#about-section {
     background-color: $bg-color-secondary;
     padding: 50px 0 100px;
 
@@ -7,7 +7,7 @@
     }
 }
 
-.bio {
+.about {
     @include xs {
         padding: 50px 0;
     }
@@ -16,7 +16,7 @@
         max-width: 1250px;
     }
 
-    .bio-container {
+    .about-container {
 
         @include lg {
             display: flex;
@@ -27,7 +27,7 @@
             line-height: 1.8;
         }
 
-        .bio-sec {
+        .about-sec {
             @include lg {
                 width: 50%;
             }
@@ -36,6 +36,36 @@
                 width: 100%;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             }
+
+            #check { 
+                display: none !important;
+            }
+
+            #check:checked ~ .more-content {
+                display: block;
+            }
+
+            #check:checked ~ label {
+                display: none;
+            }
+
+            .check {
+                font-size: 1.2rem;
+            }
+
+            .more-content {
+                display: none;
+            }
+
+
+
+
+
+
+
+
+
+
 
         }
 

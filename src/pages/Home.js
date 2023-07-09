@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../pages/Header";
-import Bio from "../pages/Bio";
+import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
 import WaveDivider from "../components/WaveDivider";
@@ -12,8 +12,8 @@ function Home() {
         <Header />
         <WaveDivider />
       </section>
-      <section id="bio-section">
-        <Bio />
+      <section id="about-section">
+        <About />
       </section>
       <section id="projects-section">
         <Projects />
