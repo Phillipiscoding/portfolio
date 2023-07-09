@@ -50,7 +50,10 @@
             }
 
             .check {
-                font-size: 1.2rem;
+                font-size: 1rem;
+                @include lg {
+                    font-size: 1.2rem;
+                }
             }
 
             .more-content {
@@ -117,3 +120,30 @@
 //     background-blend-mode: screen;
 
 // }
+
+.test {
+    @include xs {
+        // 0px
+        color: red;
+    }
+
+    @include sm {
+        // 480px
+        color: blue;
+    }
+
+    @include md {
+        // 720px
+        color: green;
+    }
+
+    @include lg {
+        // 960px
+        color: orange;
+    }
+
+    @include xl {
+        // 1200px
+        color: yellow;
+    }
+}

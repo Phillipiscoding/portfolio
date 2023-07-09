@@ -17,11 +17,11 @@ function ContactForm() {
     const errors = [];
 
     if (!input.from_name) {
-      errors.push("Please enter a name.");
+      errors.push("Please enter your name.");
     }
 
     if (!input.from_email) {
-      errors.push("Please enter an email.");
+      errors.push("Please enter your email.");
     }
 
     if (!input.message) {
@@ -31,7 +31,7 @@ function ContactForm() {
     if (errors.length > 0) {
       setErr(errors);
     } else {
-      setMessageSent("Thank you for contacting me. I look forward to connecting with you.");
+      setMessageSent("Your message was sent, I look forward to connecting with you.");
 
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         (result) => {

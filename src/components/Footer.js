@@ -4,15 +4,15 @@ import Logo from "../images/logo-ebebeb.png";
 function Footer() {
   return (
     <footer>
-      <div className="container">
-        <div>
-          <div>
+      <div className="container footer-container">
+        <div className="footer-top">
+     
             <img
               src={Logo}
               alt="Phillip Harden's logo. The letter PH inside of a circle"
               className="footer-logo"
             />
-          </div>
+        
 
           <ul>
             <li>
@@ -36,9 +36,9 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div></div>
+        <div className="footer-divider"></div>
 
-        <div>
+        <div className="copyright-div">
           <p className="copyright">&copy; 2023 Phillip Harden</p>
         </div>
       </div>

@@ -63,13 +63,13 @@ h3 {
 p {
     cursor: default;
     @include xs {
-        font-size: 1.8rem;
-        font-weight: 500;
+        font-size: 1.6rem;
+        font-weight: 300;
         line-height: 2.2;
         letter-spacing: 0.2px;
     }
     @include md {
-        font-size: 1.6rem;
+        font-weight: 400;
     } 
     @include xl {
         font-size: 1.4rem;

@@ -1,29 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-// import { isOptionalCallExpression } from "@babel/types";
+import Logo from "../images/logo-ebebeb.png";
 
 function Nav() {
-  // const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isActive, setIsActive] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  //     const navbar = document.getElementById("nav");
-  //     if (scrollTop > lastScrollTop) {
-  //       navbar.style.top = "-100px";
-  //     } else {
-  //       navbar.style.top = "0";
-  //     }
-  //     setLastScrollTop(scrollTop);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [lastScrollTop]);
 
   const toggleActiveClass = () => {
     setIsActive(!isActive);
@@ -39,6 +19,7 @@ function Nav() {
         <div className="logo-container">
           <a href="/">
             <span className="brand-name">Phillip Harden</span>
+            <img src={Logo} alt="Logo. Which is a circhle the the initials PH inside it" className="logo" />
           </a>
         </div>
 
