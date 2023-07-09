@@ -1,4 +1,5 @@
 import React from "react";
+import Family from "../images/family.jpeg";
 
 function Bio() {
   const Skills = [
@@ -29,8 +30,7 @@ function Bio() {
           <h3>Who I Am</h3>
           <p>
             I am a Frontend Developer with a Bachelors Degree from Full Sail
-            University. If a day goes by without learning something new, I feel
-            that day was a waste.
+            University. I aim to learn at least one new thing every day.
           </p>
           <p>
             In terms of frontend development, I possess a solid foundation in
@@ -42,6 +42,48 @@ function Bio() {
             experience working with APIs and databases, including MongoDB,
             MySQL, and Postgres. I derive immense satisfaction from constructing
             CRUD applications and developing RESTful APIs.
+          </p>
+
+          <p>
+            I have a wide range of hobbies, from powerlifting and health to
+            poetry and music. I got into powerlifting a few years ago. I have no
+            desire to compete, I just enjoy challenging myself and seeing just
+            what I am capable of. Not long ago, I hit a deadlift personal record
+            of 500 pounds. That and a 450 pounds squat are my call to victory in
+            powerlifting. I am into health and fitness, however I am also into
+            pizza and tacos. As you can see from my projects, they revolve
+            around one or the other. I have been writing poetry since elementary
+            school and had my first poem published in a local magazine when I
+            was i the third grade. I later turned the love of poetry into a love
+            of song writing. I recorded music as a CHH artist in the late 2000s.
+            I no longer pursue music, though I am still connected and networking
+            with the local Atlanta CHH scene.
+          </p>
+
+          <div className="family-photo-container">
+            <img
+              className="family-photo"
+              src={Family}
+              alt="This is my family. Me, my wife Seble, and our daughter Christina."
+            />
+          </div>
+
+          <p>
+            My greatest love is for my family. My wife and my daughter are the
+            biggest inspiration in my life. It was the birth of my daughter that
+            inspired me to pursue web development. I was first introduced to
+            code in the MySpace era and immediately fell in love with it. Once
+            MySpace dissolved I stopped experimenting with code. In 2019 I began
+            watching tutorials and creating small web applications. I was eager
+            to learn more. I decided that the self-taught route was not for me
+            being that I prefer a more organized and structured method of
+            learning. In 2020, I enrolled in Full Sail University in their Web
+            Design and Development program. Now that I have graduated, I use
+            tools like LinkedIn Learning and Udemy to expand my knowledge of web
+            development. I feel like a minimum of one hour a day a good
+            investment in myself and use that as a starting goal. I often begin
+            having so much fun learning something new that an hour turns into
+            two or three.
           </p>
         </section>
 
@@ -58,7 +100,6 @@ function Bio() {
           </div>
         </section>
       </div>
-
     </div>
   );
 }

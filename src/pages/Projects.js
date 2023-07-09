@@ -16,7 +16,7 @@ function Projects() {
               <a href="https://github.com/Phillipiscoding/lift-phit">
                 <img
                   src={LiftPhit}
-                  alt="This is a screenshot of an application I built called Lift Phit"
+                  alt="This is an application I built called Lift Phit"
                 />
               </a>
             </div>
@@ -52,7 +52,7 @@ function Projects() {
               <a href="https://github.com/Phillipiscoding/playfit">
                 <img
                   src={PlayFit}
-                  alt="This is a screenshot of an application that I developed called Play Fit."
+                  alt="This is an application that I developed called Play Fit."
                 />
               </a>
             </div>
@@ -91,7 +91,7 @@ function Projects() {
               <a href="https://phillipiscoding.github.io/pizzyspizza/">
                 <img
                   src={PizzysPizza}
-                  alt="This is a screenshot of a fictional pizzera's website called Pizzys Pizza"
+                  alt="This is a fictional pizzera's website called Pizzys Pizza"
                 />
               </a>
             </div>

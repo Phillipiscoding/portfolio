@@ -1,6 +1,7 @@
 #bio-section {
     background-color: $bg-color-secondary;
     padding: 50px 0 100px;
+
     @include xl {
         padding: 100px 0 200px;
     }
@@ -30,6 +31,12 @@
             @include lg {
                 width: 50%;
             }
+
+            .family-photo {
+                width: 100%;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+
         }
 
         .skills-sec {
@@ -65,3 +72,18 @@
         }
     }
 }
+
+
+
+
+
+// .image-blend {
+//     position: relative;
+//     width: 100%;
+//     height: 100vh;
+//     background-image: url(bg.jpg), url(splash.jpg);
+//     background-size: cover;
+//     background-position: center;
+//     background-blend-mode: screen;
+
+// }

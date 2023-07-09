@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/logo.png";
+import Logo from "../images/phillip.png";
 import BouncingText from "../components/BouncingText";
 // import Button from "../components/Buttons";
 
