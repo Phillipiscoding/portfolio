@@ -3,38 +3,43 @@
     top: 0;
     width: 100%;
     z-index: 1;
+
     .nav-container {
         background-color: $primary-color;
         color: $primary-color-light;
         display: flex;
         justify-content: space-between;
-        align-items: center;       
+        align-items: center;
         width: 100%;
         transition: top 0.3s;
         position: fixed;
-        top: 0;       
+        top: 0;
         padding: 0 10px;
         height: 50px;
+
         @include lg {
             height: 60px;
         }
 
         .logo-container {
             display: flex;
-            
+
             width: 300px;
+
             @include lg {
                 width: 55px;
             }
-           
+
 
             .brand-name {
                 display: none !important;
                 font-weight: 600;
                 font-size: 5vw;
+
                 @include breakpoint(240px) {
                     font-size: 2rem;
                 }
+
                 @include lg {
                     font-size: 2.6rem;
                 }
@@ -43,6 +48,7 @@
             .logo {
                 width: 45px;
                 margin-top: 5px;
+
                 @include lg {
                     width: 55px;
                     margin-top: 5px;
@@ -51,10 +57,12 @@
         }
 
         .nav-list {
+            margin-top: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
+
             @include lg {
                 gap: 60px;
             }
