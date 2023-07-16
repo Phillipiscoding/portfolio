@@ -1,25 +1,40 @@
-
-.cursor {
- 
-  z-index: 9999;
- 
-  z-index: 9999;
-}
-
-// .cursor {
-//   position: absolute;
-//   background-color: #000;
-//   width: 6px;
-//   height: 6px;
-//   border-radius: 100%;
-//   transition: 
-//     0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) transform,
-//     0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
-//   user-select: none;
-//   pointer-events: none;
-//   z-index: 10000;
-//   transform: scale(1);
-//   transform: translate(-3px, -3px);
-//   transform-origin: center;
+// .cursor {  
+//   z-index: 9999;
 // }
 
+.alias {cursor: alias;}
+.all-scroll {cursor: all-scroll;}
+.auto {cursor: auto;}
+.cell {cursor: cell;}
+.col-resize {cursor: col-resize;}
+.context-menu {cursor: context-menu;}
+.copy {cursor: copy;}
+.crosshair {cursor: crosshair;}
+.default {cursor: default;}
+.e-resize {cursor: e-resize;}
+.ew-resize {cursor: ew-resize;}
+.grab {cursor: grab;}
+.grabbing {cursor: grabbing;}
+.help {cursor: help;}
+.move {cursor: move;}
+.n-resize {cursor: n-resize;}
+.ne-resize {cursor: ne-resize;}
+.nesw-resize {cursor: nesw-resize;}
+.ns-resize {cursor: ns-resize;}
+.nw-resize {cursor: nw-resize;}
+.nwse-resize {cursor: nwse-resize;}
+.no-drop {cursor: no-drop;}
+.none {cursor: none;}
+.not-allowed {cursor: not-allowed;}
+.pointer {cursor: pointer;}
+.progress {cursor: progress;}
+.row-resize {cursor: row-resize;}
+.s-resize {cursor: s-resize;}
+.se-resize {cursor: se-resize;}
+.sw-resize {cursor: sw-resize;}
+.text {cursor: text;}
+// .url {cursor: url(myBall.cur),auto;}
+.w-resize {cursor: w-resize;}
+.wait {cursor: wait;}
+.zoom-in {cursor: zoom-in;}
+.zoom-out {cursor: zoom-out;}

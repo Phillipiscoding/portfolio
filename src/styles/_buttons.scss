@@ -27,30 +27,18 @@
         font-weight: 600;
         padding: 5px 10px;
     }
-
     @include sm {
-        font-size: 1.8rem;
         letter-spacing: 2px;
-        font-weight: 700;
         padding: 5px 15px;
     }
-
     @include md {
-        font-size: 2rem;
+        font-size: 1.8rem;
         padding: 10px 30px;
-    }
-
-    @include lg {
-        color: orange;
-    }
-
-    @include xl {
-        color: yellow;
     }
 }
 
 .btn::after {
-    background-color: $accent-color;
+    background-color: $primary-color-light;
 
 }
 
@@ -79,7 +67,7 @@
     height: 100%;
     border-radius: 50px;
     z-index: -1;
-    transition: all 0.3s ease-out;
+    transition: all 0.6s ease-out;
 }
 
 /* BUTTON STYLES */

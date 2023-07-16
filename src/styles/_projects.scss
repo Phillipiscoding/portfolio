@@ -1,5 +1,12 @@
-.projects {    
-    padding: 50px 0;
+.projects {
+    padding: 50px 0 100px;
+    @include xl {
+        padding: 100px 0 200px;
+    }
+
+    @include xl {
+        max-width: 1250px;
+    }
 
     .projects-container {
         @include lg {
@@ -7,52 +14,83 @@
             flex-direction: column;
         }
 
-        .project-article:nth-child(2) .project-img {
-            order: 2;
-          }
+        .project-info {
+            text-align: center;
+
+            .project-description {
+                @include xl {
+                    text-align: justify;
+                    padding: 0 0 0 30px;
+                }
+            }
+        }
 
         .project-article {
             @include xs {
                 margin: 0 0 50px 0;
             }
-            @include lg {
-               padding: 30px 0;
 
+            @include lg {
+                padding: 80px 0;
+            }
+
+            h3 {
+                @include lg {
+                    margin-bottom: 80px;
+                }
             }
 
             .project-article-container {
                 @include lg {
                     display: flex;
-
                 }
 
                 .project-img {
+
                     @include lg {
-                        width: 50%;
+                        width: 600px;
+                        position: relative;
+                        overflow: visible;
                     }
 
                     img {
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                        transition: transform 1s ease;
+
 
                         @include xs {
                             width: 100%;
                             margin: 10px 0;
                         }
 
-                        @include xl {
-                            max-width: 600px;
+                        @include lg {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(-1deg);
+
                         }
+                    }
+                    img:hover {
+                        @include lg {
+                            transform: translate(-50%, -50%) rotate(0deg);
+
+                        }                    
                     }
                 }
 
                 .project-info {
                     @include lg {
                         width: 50%;
-                        padding: 0 30px;
+                        padding: 0 10px;
                         display: flex;
                         flex-direction: column;
+                        justify-content: space-around;
+                    }
+
+                    @include xl {
+                        display: flex;
                         justify-content: space-between;
-                        height: 300px;
                     }
 
                     .project-description {
@@ -60,68 +98,53 @@
                             padding-bottom: 20px;
                         }
 
-
-
-
                         p {
                             @include xs {
                                 line-height: 1.8;
                             }
+
                             @include lg {
-                                padding-top: 30px;
+                                font-size: 1.6rem;
+                            }
+
+                            @include xl {
+                                padding-top: 40px;
                             }
                         }
                     }
 
                     .project-links {
+
+
                         @include xs {
                             display: flex;
                             justify-content: space-around;
-                            a {
-                                width: 120px;
-                            }
-                        }
-                        @include sm {
-                            a {
-                                width: 200px;
-                            }
-                        }
-                       
 
-                        @include lg {
                             a {
-                                width: 45%;
-                                font-size: 1.6rem;
+                                @include xs {
+                                    width: 120px;
+                                    font-size: 1.6rem;
+                                }
+
+                                @include sm {
+                                    width: 160px;
+                                    font-size: 1.8rem;
+                                }
+
+                                @include md {
+                                    width: 200px;
+                                }
+
+                                @include lg {
+                                    width: 140px;
+                                    font-size: 1.2rem;
+                                }
+
                             }
                         }
                     }
                 }
-
             }
-
-
         }
-    }
-}
-
-.test {
-    @include xs {
-        color: red;
-    }
-
-    @include sm {
-        color: blue;
-    }
-
-    @include md {
-        color: green;
-    }
-
-    @include lg {
-        color: orange;
-    }
-
-    @include xl {
-        color: yellow;
     }
 }

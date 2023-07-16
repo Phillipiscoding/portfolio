@@ -1,13 +1,26 @@
 .header {
 
-    // padding: 80px 0 150px;
-    // height: calc(100vh - 40px);
+    @include xs {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include sm {
+        margin-top: 40px;
+        heigth: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
     @include lg {
-        // 960px
-        // height: calc(60vh - 50px);
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    @include xl {
+        max-width: 1250px;
     }
 
     .header-container {
@@ -22,31 +35,33 @@
             width: 100%;
         }
 
-
-
-        // Greeting Div
+        // Greeting Div header-content
         div:nth-child(2) {
-            // padding: 100px;
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            @include xs {
+                text-align: center;
+            }      
+         
+
 
             @include lg {
-                // 960px
-                width: 400px;
+                text-align: left;
+                margin: 250px 0 50px 0;
             }
 
             @include xl {
-                padding: 0 50px;
                 width: 1000px;
+                justify-content: end;
+                padding-bottom: 150px;
             }
 
             .contact-btn {
                 width: 100%;
                 text-align: center;
             }
-
 
             .greeting {
                 text-align: center;
@@ -64,20 +79,15 @@
                 }
 
                 @include lg {
-                    // 960px
                     font-size: 6rem;
                     letter-spacing: 8px;
                 }
 
                 @include xl {
-                    // 960px
-                    font-size: 10rem;
+                    font-size: 9.5rem;
                     letter-spacing: 8px;
                 }
-
-
             }
-
 
             .webdev {
                 letter-spacing: 0.5px;
@@ -95,37 +105,34 @@
                     font-size: 1.6rem;
                 }
 
-                @include lg {
-                    font-size: 1.8rem;
-                }
-
                 @include xl {
                     font-size: 2rem;
                 }
+            }
 
+            .contact-btn-container {
+                margin-top: 20px;
             }
         }
 
         // image div
         .logo-container:nth-child(1) {
-            // margin: auto;
             text-align: center;
 
             @include lg {
-                // 960px
                 order: 2;
-                height: calc(100vh - 40px);
-                width: 400px;
             }
 
             @include xl {
-                height: calc(100vh - 40px);
+                width: 50%;
+                text-align: right;
             }
 
             img {
+
                 @include xs {
-                    margin: 50px 0 0 0;
-                    width: 80%;
+                    margin: 10px 0 0 0;
+                    width: 70vw;
                 }
 
                 @include sm {
@@ -134,22 +141,21 @@
 
                 @include md {
                     width: 350px;
+
                 }
 
                 @include lg {
-                    width: 375px;
-                    margin-top: 100px;
+                    width: 300px;
+                    margin: 30px 0 0 0;
                 }
 
                 @include xl {
-                    width: 425px;
-                    margin-top: 50px;
+                    width: 450px;
+                    margin: 75px 0 0 0;
                 }
             }
         }
-
     }
-
 }
 
 
