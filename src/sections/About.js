@@ -21,7 +21,8 @@ function About() {
     { name: "Bootstrap", url: "https://getbootstrap.com/" },
   ];
   return (
-    <div className="about container">
+    <section id="about">
+      <div className="about container" >
       <h2>About Me</h2>
       <hr className="rounded" />
       <div className="about-container">
@@ -88,7 +89,7 @@ function About() {
           <div className="skills-container">
             <ul className="skills-list">
               {Skills.map((skill, index) => (
-                <li className="skill" key={index}>
+                <li className="skill btn" key={index}>
                   <a href={skill.url}>{skill.name}</a>
                 </li>
               ))}
@@ -96,7 +97,9 @@ function About() {
           </div>
         </section>
       </div>
-    </div>
+
+      </div>
+    </section>
   );
 }
 

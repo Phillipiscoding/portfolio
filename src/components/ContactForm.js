@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [input, setInput] = useState({});
@@ -31,7 +31,9 @@ function ContactForm() {
     if (errors.length > 0) {
       setErr(errors);
     } else {
-      setMessageSent("Your message was sent, I look forward to connecting with you.");
+      setMessageSent(
+        "Your message was sent, I look forward to connecting with you."
+      );
 
       emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
         (result) => {
@@ -42,8 +44,6 @@ function ContactForm() {
           console.log(error.text);
         }
       );
-
-
     }
   };
 
@@ -91,7 +91,7 @@ function ContactForm() {
         ></textarea>
       </div>
       <div>
-        <button className="btn btn-primary no-op" onClick={handleSubmit}>
+        <button className="btn btn-primary" onClick={handleSubmit}>
           Submit
         </button>
       </div>
@@ -133,6 +133,13 @@ function ContactForm() {
           </button>
         </div>
       )}
+
+      <div className="call-container">
+        <h3>Give me a call</h3>
+        <a className="call-link" href="tel:+16786803325">
+          <span className="call-icon">Call</span> (678) 680-3325
+        </a>
+      </div>
     </form>
   );
 }

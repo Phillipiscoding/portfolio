@@ -1,37 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import "./styles/App.scss";
+// Components
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
-import Home from "./pages/Home";
-// import Bio from "./pages/Bio";
-// import Projects from "./pages/Projects";
-// import Contact from "./pages/Contact";
-// import Resume from "./pages/Resume";
-// import Sandbox from "./pages/Sandbox";
-// import Cursor from "./components/TrailingCursor";
-// import Cursor from "./components/Cursor";
+// Sections
+import Header from "./sections/Header";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
-    <Router>
-      {/* <Cursor /> */}
-      <div className="app">
+      <>
         <Nav />
-        <div className="body">
-         
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path="/home" element={<Home />} />
-              {/* <Route exact path="/resume" element={<Resume />} /> */}
-            </Routes>
-      
-        </div>
-
+        <Header />
+        <About />
+        <Projects />
+        <Contact />
         <Footer />
-      </div>
-    </Router>
+      </>
   );
 }
 

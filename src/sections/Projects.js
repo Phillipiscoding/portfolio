@@ -5,14 +5,15 @@ import PizzysPizza from "../images/pizzyspizza.png";
 
 function Projects() {
   return (
-    <div className="projects container">
+    <section  id="projects">
+      <div className="projects container">
       <h2>My Projects</h2>
       <hr className="rounded" />
       <div className="projects-container">
         <article className="project-article">
           <h3>Lift Phit</h3>
           <div className="project-article-container">
-            <div className="project-img">
+            <div className="project-img slide-in pre-slide-in">
               <a href="https://github.com/Phillipiscoding/lift-phit" target="_new">
                 <img
                   src={LiftPhit}
@@ -48,7 +49,7 @@ function Projects() {
         <article className="project-article">
           <h3>Play Fit</h3>
           <div className="project-article-container">
-            <div className="project-img">
+            <div className="project-img slide-in pre-slide-in">
               <a href="https://github.com/Phillipiscoding/playfit"  target="_new">
                 <img
                   src={PlayFit}
@@ -87,7 +88,7 @@ function Projects() {
         <article className="project-article">
           <h3>Pizzys Pizza</h3>
           <div className="project-article-container">
-            <div className="project-img">
+            <div className="project-img slide-in pre-slide-in">
               <a href="https://phillipiscoding.github.io/pizzyspizza/"  target="_new">
                 <img
                   src={PizzysPizza}
@@ -123,7 +124,9 @@ function Projects() {
           </div>
         </article>
       </div>
-    </div>
+
+      </div>
+    </section>
   );
 }
 

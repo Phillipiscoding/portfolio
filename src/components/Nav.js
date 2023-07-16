@@ -14,13 +14,22 @@ function Nav() {
   };
 
   return (
-    <nav className="nav">
-      <div className="nav-container" id="nav">
+    <nav className="nav"  id="nav">
+      <div className="nav-container">
         <div className="logo-container">
-          <a href="/">
-            <span className="brand-name">Phillip Harden</span>
+        <Link
+              className="pointer logo"
+              onClick={removeActive}
+              activeClass="active"
+              to="header"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+             
             <img src={Logo} alt="Logo. Which is a circhle the the initials PH inside it" className="logo" />
-          </a>
+            </Link>
         </div>
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
@@ -34,13 +43,15 @@ function Nav() {
               className="pointer"
               onClick={removeActive}
               activeClass="active"
-              to="about-section"
+              to="about"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              About
+              <span>
+                About
+              </span>
             </Link>
           </li>
           <li>
@@ -48,13 +59,15 @@ function Nav() {
             className="pointer"
               onClick={removeActive}
               activeClass="active"
-              to="projects-section"
+              to="projects"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              Projects
+              <span>
+                Projects
+              </span>
             </Link>
           </li>
 
@@ -63,13 +76,15 @@ function Nav() {
             className="pointer"
               onClick={removeActive}
               activeClass="active"
-              to="contact-section"
+              to="contact"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              Contact
+              <span>
+                Contact
+              </span>
             </Link>
           </li>
         </ul>

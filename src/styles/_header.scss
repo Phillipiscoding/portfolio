@@ -1,22 +1,23 @@
+#header {
+    margin-top: 60px;
+    // padding-top: 100px;
+    background: linear-gradient(to bottom, rgba(255, 255, 254, 0.95) 0%, rgba(249, 249, 248, 0.85) 100%), url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 .header {
 
     @include xs {
-        margin-top: 40px;
         display: flex;
         flex-direction: column;
     }
 
     @include sm {
-        margin-top: 40px;
-        heigth: 100vh;
         display: flex;
         flex-direction: column;
-    }
-
-    @include lg {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     @include xl {
@@ -24,9 +25,7 @@
     }
 
     .header-container {
-
         @include lg {
-            // 960px
             display: flex;
             justify-content: space-around;
         }
@@ -41,11 +40,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             @include xs {
                 text-align: center;
-            }      
-         
-
+            }
 
             @include lg {
                 text-align: left;
