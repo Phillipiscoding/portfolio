@@ -4,10 +4,11 @@ import ContactForm from '../components/ContactForm';
 function Contact() {
   return (
     <div className="contact">
-      <div className="container">
+      <div className="">
       <h2>Contact Me</h2>
       <hr className="rounded" />
     <ContactForm />
+  
       </div>
       
     

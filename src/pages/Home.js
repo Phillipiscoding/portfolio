@@ -1,22 +1,19 @@
 import React from "react";
-import Hero from "../images/phillip.png";
-import BouncingText from "../components/BouncingText";
-
 import Header from "../pages/Header";
-import Bio from "../pages/Bio";
+import About from "../pages/About";
 import Projects from "../pages/Projects";
 import Contact from "../pages/Contact";
-import Resume from "../pages/Resume";
+import WaveDivider from "../components/WaveDivider";
 
 function Home() {
-  const greeting = "Hi, I'm Phillip.".split("");
   return (
-    <div className="container">
+    <>
       <section id="header-section">
         <Header />
+        <WaveDivider />
       </section>
-      <section id="bio-section">
-        <Bio />
+      <section id="about-section">
+        <About />
       </section>
       <section id="projects-section">
         <Projects />
@@ -24,7 +21,7 @@ function Home() {
       <section id="contact-section">
         <Contact />
       </section>
-    </div>
+    </>
   );
 }
 

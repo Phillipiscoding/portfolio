@@ -1,30 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import Logo from "../images/logo.png";
-// import { isOptionalCallExpression } from "@babel/types";
+import Logo from "../images/logo-ebebeb.png";
 
 function Nav() {
-  // const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isActive, setIsActive] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY || document.documentElement.scrollTop;
-  //     const navbar = document.getElementById("nav");
-  //     if (scrollTop > lastScrollTop) {
-  //       navbar.style.top = "-100px";
-  //     } else {
-  //       navbar.style.top = "0";
-  //     }
-  //     setLastScrollTop(scrollTop);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [lastScrollTop]);
 
   const toggleActiveClass = () => {
     setIsActive(!isActive);
@@ -37,33 +16,36 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="nav-container" id="nav">
-        <div className="logo-container">          
-          <a href="/" >
+        <div className="logo-container">
+          <a href="/">
             <span className="brand-name">Phillip Harden</span>
+            <img src={Logo} alt="Logo. Which is a circhle the the initials PH inside it" className="logo" />
           </a>
         </div>
 
         <ul className={`nav-list ${isActive ? "active" : ""}`}>
-          <li onClick={removeActive}>
-            <a href="#" className="navLink">
-              Resume
+          {/* <li onClick={removeActive}>
+            <a href="https://github.com/Phillipiscoding/portfolio" className="navLink pointer">
+              See Code
             </a>
-          </li>
+          </li> */}
           <li>
             <Link
+              className="pointer"
               onClick={removeActive}
               activeClass="active"
-              to="bio-section"
+              to="about-section"
               spy={true}
               smooth={true}
               offset={-70}
               duration={500}
             >
-              Bio
+              About
             </Link>
           </li>
           <li>
             <Link
+            className="pointer"
               onClick={removeActive}
               activeClass="active"
               to="projects-section"
@@ -78,6 +60,7 @@ function Nav() {
 
           <li>
             <Link
+            className="pointer"
               onClick={removeActive}
               activeClass="active"
               to="contact-section"

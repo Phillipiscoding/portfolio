@@ -10,7 +10,7 @@ function Cursor() {
       color="65, 71, 112"
       outerAlpha={0.2}
       innerScale={0}
-      outerScale={8}
+      outerScale={2}
       trailingSpeed={8}
       clickables={[
         "a",

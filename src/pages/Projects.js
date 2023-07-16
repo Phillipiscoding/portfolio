@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectImage from "../images/project-image.png";
 import LiftPhit from "../images/liftphit.png";
 import PlayFit from "../images/playfit.png";
 import PizzysPizza from "../images/pizzyspizza.png";
@@ -12,17 +11,15 @@ function Projects() {
       <div className="projects-container">
         <article className="project-article">
           <h3>Lift Phit</h3>
-
           <div className="project-article-container">
             <div className="project-img">
-              <a href="https://github.com/Phillipiscoding/lift-phit">
+              <a href="https://github.com/Phillipiscoding/lift-phit" target="_new">
                 <img
                   src={LiftPhit}
-                  alt="This is a screenshot of an application I built called Lift Phit"
+                  alt="This is an application I built called Lift Phit"
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -31,16 +28,15 @@ function Projects() {
                   seamlessly track their gym workouts.
                 </p>
               </div>
-
               <div className="project-links">
                 <a
-                  href="https://github.com/Phillipiscoding/lift-phit"
+                  href="https://github.com/Phillipiscoding/lift-phit" target="_new"
                   className="btn btn-primary"
                 >
                   Code
                 </a>
                 <a
-                  href="https://github.com/Phillipiscoding/lift-phit"
+                  href="https://github.com/Phillipiscoding/lift-phit" target="_new"
                   className="btn btn-primary"
                 >
                   Live App
@@ -49,19 +45,17 @@ function Projects() {
             </div>
           </div>
         </article>
-
         <article className="project-article">
           <h3>Play Fit</h3>
           <div className="project-article-container">
             <div className="project-img">
-              <a href="https://github.com/Phillipiscoding/playfit">
+              <a href="https://github.com/Phillipiscoding/playfit"  target="_new">
                 <img
                   src={PlayFit}
-                  alt="This is a screenshot of an application that I developed called Play Fit."
+                  alt="This is an application that I developed called Play Fit."
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -73,17 +67,16 @@ function Projects() {
                   and demos on how to perform them.
                 </p>
               </div>
-
               <div className="project-links">
                 <a
                   href="https://github.com/Phillipiscoding/playfit"
-                  className="btn btn-primary"
+                  className="btn btn-primary" target="_new"
                 >
                   Code
                 </a>
                 <a
                   href="https://github.com/Phillipiscoding/playfit"
-                  className="btn btn-primary"
+                  className="btn btn-primary" target="_new"
                 >
                   Live App
                 </a>
@@ -91,19 +84,17 @@ function Projects() {
             </div>
           </div>
         </article>
-
         <article className="project-article">
           <h3>Pizzys Pizza</h3>
           <div className="project-article-container">
             <div className="project-img">
-              <a href="https://github.com/Phillipiscoding/pizzyspizza">
+              <a href="https://phillipiscoding.github.io/pizzyspizza/"  target="_new">
                 <img
                   src={PizzysPizza}
-                  alt="This is a screenshot of a fictional pizzera's website called Pizzys Pizza"
+                  alt="This is a fictional pizzera's website called Pizzys Pizza"
                 />
               </a>
             </div>
-
             <div className="project-info">
               <div className="project-description">
                 <p>
@@ -116,13 +107,13 @@ function Projects() {
               </div>
               <div className="project-links">
                 <a
-                  href="https://github.com/Phillipiscoding/pizzyspizza"
+                  href="https://github.com/Phillipiscoding/pizzyspizza" target="_new"
                   className="btn btn-primary"
                 >
                   Code
                 </a>
                 <a
-                  href="https://github.com/Phillipiscoding/pizzyspizza"
+                  href="https://phillipiscoding.github.io/pizzyspizza/" target="_new"
                   className="btn btn-primary"
                 >
                   Live App
