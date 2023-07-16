@@ -36,7 +36,7 @@ function Header() {
 
             <div className="contact-btn-container">
               <a
-                href="#contact-section"
+                href="#contact"
                 className="btn btn-action contact-btn btn-flash"
               >
                 Contact Me
