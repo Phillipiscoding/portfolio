@@ -16,23 +16,23 @@ function Footer() {
 
           <ul>
             <li>
-              <a href="https://github.com/PhillipHarden">GitHub</a>
+              <a href="https://github.com/PhillipHarden" target="_new">GitHub</a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/phillip-harden-a3279a1b3/">
+              <a href="https://www.linkedin.com/in/phillip-harden-a3279a1b3/" target="_new">
                 LinkedIn{" "}
               </a>
             </li>
             <li>
-              <a href="https://twitter.com/Phillipiscoding">Twitter</a>
+              <a href="https://twitter.com/Phillipiscoding" target="_new">Twitter</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/phillipiscoding/">
+              <a href="https://www.instagram.com/phillipiscoding/" target="_new">
                 Instagram{" "}
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/Phillipiscoding">Facebook</a>
+              <a href="https://www.facebook.com/Phillipiscoding" target="_new">Facebook</a>
             </li>
           </ul>
         </div>
