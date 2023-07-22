@@ -90,7 +90,7 @@ function About() {
             <ul className="skills-list">
               {Skills.map((skill, index) => (
                 <li className="skill btn" key={index}>
-                  <a href={skill.url}>{skill.name}</a>
+                  <a href={skill.url}  target="_new">{skill.name}</a>
                 </li>
               ))}
             </ul>

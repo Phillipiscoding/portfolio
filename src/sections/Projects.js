@@ -50,7 +50,7 @@ function Projects() {
           <h3>Play Fit</h3>
           <div className="project-article-container">
             <div className="project-img slide-in pre-slide-in">
-              <a href="https://github.com/Phillipiscoding/playfit"  target="_new">
+              <a href="https://playfit.onrender.com/"  target="_new">
                 <img
                   src={PlayFit}
                   alt="This is an application that I developed called Play Fit."
@@ -76,7 +76,7 @@ function Projects() {
                   Code
                 </a>
                 <a
-                  href="https://github.com/Phillipiscoding/playfit"
+                  href="https://playfit.onrender.com/"
                   className="btn btn-primary" target="_new"
                 >
                   Live App
