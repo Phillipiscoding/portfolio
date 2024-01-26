@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../images/logo-ebebeb.png";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
       <div className="container footer-container">
@@ -39,7 +40,7 @@ function Footer() {
         <div className="footer-divider"></div>
 
         <div className="copyright-div">
-          <p className="copyright">&copy; 2023 Phillip Harden</p>
+          <p className="copyright">&copy; {currentYear} Phillip Harden</p>
         </div>
       </div>
     </footer>
